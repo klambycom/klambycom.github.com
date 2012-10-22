@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Christian Nilsson]]></title>
+  <link href="http://klambycom.github.com/atom.xml" rel="self"/>
+  <link href="http://klambycom.github.com/"/>
+  <updated>2012-10-22T16:02:52+02:00</updated>
+  <id>http://klambycom.github.com/</id>
+  <author>
+    <name><![CDATA[Christian Nilsson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
