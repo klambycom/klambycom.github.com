@@ -1,2 +1,161 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+body { 
+  font-size: 1.15em;
+  line-height: 1.5em;
+  color: #222;
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+}
+
+h1 { font-size: 2.6em; line-height: 1.2em; }
+h2 { font-size: 1.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+  font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* Header */
+#header {
+  font-size: 2.5em;
+  text-shadow: .5em 0 0 rgba(0%, 100%, 100%, 0.6),
+               -.5em 0 0 rgba(100%, 0%, 0%, 0.6);
+  //text-shadow: .1em 0 0 rgba(0%, 100%, 100%, 0.6),
+  //             -.1em 0 0 rgba(100%, 0%, 0%, 0.6);
+}
+
+#header a {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+
+/* Article header */
+article header {
+  position: relative;
+  padding-top: 2em;
+}
+
+article header p.meta {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #aaa;
+}
+
+/* Article footer */
+article > footer {
+  padding-bottom: 2.5em;
+  margin-top: 2em;
+  font-size: .8em;
+  font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+.pagination:before, .pagination:after {
+  content: '\2014';
+  padding: 0 .3em;
+}
+
+/* Code */
+p code, li code {
+  display: inline-block;
+  background: #fff;
+  font-size: .8em;
+  line-height: 1.5em;
+  color: #555;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  padding: 0 .3em;
+}
+
+pre {
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+
+/* Sidebar */
+#sidebar {
+  font-size: .85em;
+  line-height: 1.5em;
+}
+
+#sidebar h1 {
+  font-size: 2.2em;
+}
+
+/* Blog archive */
+#blog-archives {
+  color: #aaa;
+}
+
+#blog-archives h2 {
+  /*margin-bottom: .3em;*/
+  font-weight: normal;
+  /*display: inline-block;*/
+  /*position: relative;*/
+  float: left;
+}
+
+#blog-archives article {
+  padding-left: 4.5em;
+  padding-bottom: .7em;
+  margin-left: 5em;
+  position: relative;
+}
+
+#blog-archives h1 {
+  font-size: 1.5em;
+  color: #222;
+  margin-bottom: .3em;
+}
+
+#blog-archives time {
+  position: absolute;
+  text-align: right;
+  left: 0em;
+  top: .7em;
+  font-size: .9em;
+  line-height: 1.2em;
+  font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;
+}
+
+#blog-archives time .year {
+  display: none;
+}
+
+#blog-archives article footer {
+  padding: 0;
+  margin: 0;
+}
