@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Christian Nilsson]]></title>
-  <link href="http://klambycom.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Webbteknisk introduktion | Christian Nilsson]]></title>
+  <link href="http://klambycom.github.com/blog/categories/webbteknisk-introduktion/atom.xml" rel="self"/>
   <link href="http://klambycom.github.com/"/>
   <updated>2012-10-30T11:53:47+01:00</updated>
   <id>http://klambycom.github.com/</id>
