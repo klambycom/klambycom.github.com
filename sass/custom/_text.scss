@@ -9,17 +9,31 @@
    Basic HTML
    ========================================================================== */
 
-pre, code { font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace; }
+pre, code { font-family: $code-font; }
 hr { border: 0 #ccc solid; border-top-width: 1px; clear: both; height: 0; }
 
 /* =============================================================================
    Headings
    ========================================================================== */
 
-h3 { font-size: 1em; }
-h4 { font-size: 1em; }
-h5 { font-size: 1em; }
-h6 { font-size: 1em; }
+body { 
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
+  font-family: $sarif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+}
+
+h1 { font-size: $h1-size; line-height: 1.2em; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h3-size; }
+h5 { font-size: $h3-size; }
+h6 { font-size: $h3-size; }
 
 /* =============================================================================
    Spacing

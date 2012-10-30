@@ -1,4 +1,32 @@
+// Fonts
+$sarif: "PT Serif", Georgia, Times, "Times New Roman", serif;
+$sans-serif: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+$code-font: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+
+// Text
+$font-size: 1.15em;
+$line-height: 1.5em;
+
+// Colors
+$text-color: #222;
+$link-color: black;
+$hover-link-color: black;
+$visited-link-color: black;
+
+// Headers
+$h1-size: 2.6em;
+$h2-size: 1.5em;
+$h3-size: 1em;
+$h4-size: 1em;
+$h5-size: 1em;
+$h6-size: 1em;
+
+// Selection
+$selection-color: white;
+$selection-bg-color: #222;
+
 @import "custom/reset";
 @import "custom/grid";
 @import "custom/text";
+@import "custom/effects";
 @import "custom/styles";
