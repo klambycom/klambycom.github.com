@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Octopress på Github"
-date: 2012-10-30 12:05
+date: 2012-10-31 11:50
 comments: true
 categories: [Webbteknisk introduktion, Octopress, Github]
-published: false
 ---
 
 Lite text om Github pages, jekyll och octopress.
