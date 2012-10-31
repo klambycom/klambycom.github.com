@@ -8,7 +8,7 @@ categories: [Webbteknisk introduktion, Github, Octopress]
 
 Denna bloggen är skapad för mitt porjekt i 
 [Webbteknisk introduktion](https://coursepress.lnu.se/kurs/webbteknisk-introduktion/), 
-som är att skapa ett [Octopress](http://octopress.org/)-tema.  Men 
+som går ut på att jag ska skapa ett [Octopress](http://octopress.org/)-tema.  Men 
 förhoppningsvis kommer jag forsätta blogga även efter kursen.
 
 Från början hade jag tänkt skriva en blogg från grunden i Ruby on Rails. Men
