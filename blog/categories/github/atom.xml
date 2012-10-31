@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Christian Nilsson]]></title>
   <link href="http://klambycom.github.com/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://klambycom.github.com/"/>
-  <updated>2012-10-31T11:43:49+01:00</updated>
+  <updated>2012-10-31T11:48:00+01:00</updated>
   <id>http://klambycom.github.com/</id>
   <author>
     <name><![CDATA[Christian Nilsson]]></name>
@@ -20,7 +20,7 @@
     <id>http://klambycom.github.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter</id>
     <content type="html"><![CDATA[<p>Denna bloggen är skapad för mitt porjekt i
 <a href="https://coursepress.lnu.se/kurs/webbteknisk-introduktion/">Webbteknisk introduktion</a>,
-som är att skapa ett <a href="http://octopress.org/">Octopress</a>-tema.  Men
+som går ut på att jag ska skapa ett <a href="http://octopress.org/">Octopress</a>-tema.  Men
 förhoppningsvis kommer jag forsätta blogga även efter kursen.</p>
 
 <p>Från början hade jag tänkt skriva en blogg från grunden i Ruby on Rails. Men
