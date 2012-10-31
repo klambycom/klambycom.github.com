@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Octopress på Github"
-date: 2012-10-26 00:05
+date: 2012-10-30 12:05
 comments: true
 categories: [Webbteknisk introduktion, Octopress, Github]
 published: false
@@ -49,8 +49,8 @@ för att det inte ska synas, även om du pushar till Github.
 När du har skrivit färdigt inlägget genererar du html-filerna i mappen
 _deploy/, och pushar till master branchen.
 
-    rake generate
-    rake deploy
+    bundle exec rake generate
+    bundle exec rake deploy
 
 Pusha source/ till Github måste du göra manuellt.
 
@@ -60,5 +60,25 @@ Pusha source/ till Github måste du göra manuellt.
 
 ## Ändra utseendet
 
+Man ändrar utseendet i `sass/custom/` men kom ihåg att lägga till filerna du 
+har ändrat till `sass/screen.scss`.
+
+Ändra CSS är enkelt, det är tyvärr inte HTML. Filerna finns utspridda lite
+överallt i `source/`. Om du letar lite hittar du tillslut den filen du vill
+ändra.
 
 ## Egen domän
+
+För att koppla en egen domän till din blogg måste du skapa en fil med namnet
+`CNAME` i `source/`.
+
+    cd source
+    echo 'klamby.com' >> CNAME
+    bundle exec rake generate
+    bundle exec rake deploy
+
+Pusha sen `source/` till Github.
+
+    git add .
+    git commit -am 'Created a CNAME for Klamby.com'
+    git push origin source
