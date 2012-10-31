@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Christian Nilsson]]></title>
-  <link href="http://klambycom.github.com/atom.xml" rel="self"/>
-  <link href="http://klambycom.github.com/"/>
-  <updated>2012-10-31T11:52:55+01:00</updated>
-  <id>http://klambycom.github.com/</id>
+  <link href="http://klamby.com/atom.xml" rel="self"/>
+  <link href="http://klamby.com/"/>
+  <updated>2012-10-31T13:13:41+01:00</updated>
+  <id>http://klamby.com/</id>
   <author>
     <name><![CDATA[Christian Nilsson]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octopress på Github]]></title>
-    <link href="http://klambycom.github.com/2012/10/31/octopress-pa-github/"/>
+    <link href="http://klamby.com/2012/10/31/octopress-pa-github/"/>
     <updated>2012-10-31T11:50:00+01:00</updated>
-    <id>http://klambycom.github.com/2012/10/31/octopress-pa-github</id>
+    <id>http://klamby.com/2012/10/31/octopress-pa-github</id>
     <content type="html"><![CDATA[<p>Lite text om Github pages, jekyll och octopress.</p>
 
 <h2>Sätta upp bloggen</h2>
@@ -102,9 +102,9 @@ git push origin source
   
   <entry>
     <title type="html"><![CDATA[Hello World: Den första av många bloggposter]]></title>
-    <link href="http://klambycom.github.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter/"/>
+    <link href="http://klamby.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter/"/>
     <updated>2012-10-29T21:57:00+01:00</updated>
-    <id>http://klambycom.github.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter</id>
+    <id>http://klamby.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter</id>
     <content type="html"><![CDATA[<p>Denna bloggen är skapad för mitt porjekt i
 <a href="https://coursepress.lnu.se/kurs/webbteknisk-introduktion/">Webbteknisk introduktion</a>,
 som går ut på att jag ska skapa ett <a href="http://octopress.org/">Octopress</a>-tema.  Men

@@ -1,21 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>
-            http://klambycom.github.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter/
-        </loc>
+        <loc>http://klamby.com/2012/10/29/hello-world-den-forsta-av-manga-bloggposter/</loc>
         <lastmod>2012-10-31T11:47:11+01:00</lastmod>
     </url>
     <url>
-        <loc>http://klambycom.github.com/2012/10/31/octopress-pa-github/</loc>
+        <loc>http://klamby.com/2012/10/31/octopress-pa-github/</loc>
         <lastmod>2012-10-31T11:50:09+01:00</lastmod>
     </url>
     <url>
-        <loc>http://klambycom.github.com/blog/archives/</loc>
+        <loc>http://klamby.com/blog/archives/</loc>
         <lastmod>2012-10-31T11:50:09+01:00</lastmod>
     </url>
     <url>
-        <loc>http://klambycom.github.com/</loc>
+        <loc>http://klamby.com/</loc>
         <lastmod>2012-10-31T11:50:09+01:00</lastmod>
     </url>
 </urlset>
