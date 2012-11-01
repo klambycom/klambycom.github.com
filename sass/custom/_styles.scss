@@ -68,22 +68,12 @@ article header {
   a, a:visited {
     color: $text-color;
     text-decoration: none;
-
-    -webkit-transition: all 1s ease;
-    -moz-transition:    all 1s ease;
-    -ms-transition:     all 1s ease;
-    -o-transition:      all 1s ease;
-    transition:         all 1s ease;
+    @include transition(all 1s ease);
 
     &:hover {
       color: $link-color;
       text-decoration: underline;
-
-      -webkit-transition: all 1s ease;
-      -moz-transition:    all 1s ease;
-      -ms-transition:     all 1s ease;
-      -o-transition:      all 1s ease;
-      transition:         all 1s ease;
+      @include transition(all 1s ease);
     }
   }
 }
@@ -115,11 +105,7 @@ p code, li code {
   line-height: 1.5em;
   color: #555;
   border: 1px solid #ddd;
-  -webkit-border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
-  -ms-border-radius: 0.4em;
-  -o-border-radius: 0.4em;
-  border-radius: 0.4em;
+  @include border-radius(0.4em);
   padding: 0 .3em;
 }
 
@@ -133,11 +119,7 @@ pre {
   white-space: pre-wrap;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  -webkit-border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
-  -ms-border-radius: 0.4em;
-  -o-border-radius: 0.4em;
-  border-radius: 0.4em;
+  @include border-radius(0.4em);
 }
 
 /* Sidebar */
