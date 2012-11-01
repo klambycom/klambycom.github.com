@@ -12,6 +12,11 @@
 #about-me-sidebar {
   margin-top: 10px;
 
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+
   header {
     position: relative;
 
@@ -21,6 +26,29 @@
       left: 10px;
       color: white;
     }
+  }
+
+  a {
+    display: block;
+
+    -webkit-transition: all 1s ease;
+    -moz-transition:    all 1s ease;
+    -ms-transition:     all 1s ease;
+    -o-transition:      all 1s ease;
+    transition:         all 1s ease;
+  }
+
+  .flip {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform:    rotateY(180deg);
+    -o-transform:      rotateY(180deg);
+    transform:         rotateY(180deg);
+
+    -webkit-transition: all 1s ease;
+    -moz-transition:    all 1s ease;
+    -ms-transition:     all 1s ease;
+    -o-transition:      all 1s ease;
+    transition:         all 1s ease;
   }
 }
 

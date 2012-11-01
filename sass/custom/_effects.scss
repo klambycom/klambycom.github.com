@@ -1,9 +1,9 @@
 body {
-  -webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease .9s;
 }
 
 .click {
-  -webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease .9s;
   -webkit-transform: translateX(-400px);
 }
 
@@ -20,6 +20,6 @@ body {
   overflow: auto;
   background: #333;
 
-  -webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease .9s;
   -webkit-transform: translate(100%);
 }
