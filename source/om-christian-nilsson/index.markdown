@@ -9,9 +9,10 @@ footer: true
 
 <div id="hcard-Christian-Anders-Nilsson" class="vcard">
  <img src="http://www.gravatar.com/avatar/9111d52badda5eb1be20947fe3a49d79?s=120" alt="Bild på Christian Nilsson" class="photo"/>
- <a class="url fn n" href="http://www.klamby.com"><span class="additional-name">Anders</span> <span class="given-name">Christian</span> <span class="family-name">Nilsson</span></a> 
+ <a class="url fn n" href="http://www.klamby.com"><strong><span class="additional-name">Anders</span> <span class="given-name">Christian</span> <span class="family-name">Nilsson</span></strong></a>
  <div><span class="org">Linnéuniversitetet</span>, <span class="role">Student</span></div>
  <a class="email" href="mailto:christian@klamby.com">christian@klamby.com</a>
+ <div class="tel">0733914177</div>
 
  <div class="adr">
   <div class="street-address">Bruksgatan 1</div>
@@ -20,7 +21,6 @@ footer: true
   <span class="region">Södra Öland</span>, 
   <span class="country-name">Sweden</span>
  </div>
- <div class="tel">0733914177</div>
 </div>
 
 ## Presentation

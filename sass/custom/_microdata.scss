@@ -1,0 +1,30 @@
+#hcard-Christian-Anders-Nilsson {
+  margin-bottom: 20px;
+  font-size: .8em;
+  line-height: 1.3em;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  .photo {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .additional-name {
+    display: none;
+  }
+
+  .n {
+    font-size: 1.5em;
+  }
+
+  .adr {
+    font-size: .9em;
+    margin-top: 7px;
+  }
+}
