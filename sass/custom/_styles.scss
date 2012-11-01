@@ -78,6 +78,11 @@ article header {
   }
 }
 
+/* Article */
+article:not(:nth-last-child(2)) {
+  margin-bottom: 100px;
+}
+
 /* Article footer */
 article > footer {
   padding-bottom: 2.5em;
