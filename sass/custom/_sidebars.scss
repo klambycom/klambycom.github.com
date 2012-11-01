@@ -1,3 +1,13 @@
+#sidebar {
+  ul, li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  a:visited { color: $link-color; }
+}
+
 // About me
 #about-me-sidebar {
   margin-top: 10px;
@@ -11,5 +21,77 @@
       left: 10px;
       color: white;
     }
+  }
+}
+
+// Latest posts
+#recent-post-sidebar {
+  a:visited { color: $visited-link-color; }
+}
+
+// Categories cloud
+#categories-sidebar {
+  margin-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    -webkit-transition: all 2s ease;
+    -moz-transition:    all 2s ease;
+    -ms-transition:     all 2s ease;
+    -o-transition:      all 2s ease;
+    transition:         all 2s ease;
+
+    &:hover { 
+      color: red;
+      -webkit-transition: all 2s ease;
+      -moz-transition:    all 2s ease;
+      -ms-transition:     all 2s ease;
+      -o-transition:      all 2s ease;
+      transition:         all 2s ease;
+    }
+  }
+}
+
+// Social links
+// http://www.spritebox.net/
+#social-sidebar {
+  a {
+    text-decoration: none;
+    display: block;
+    &:hover { text-decoration: underline; }
+  }
+
+  li a {
+    background: url('/images/social_sprite.png') no-repeat;
+    width: 16px;
+    height: 19px;
+
+    margin-bottom: 10px;
+    padding-left: 18px;
+  }
+
+  .twitter a {
+    background-position-y: 0px;
+    color: rgba(57,169,236,1);
+  }
+
+  .googleplus a {
+    background-position-y: -19px;
+    color: rgba(230,64,47,1);
+  }
+
+  .facebook a {
+    background-position-y: -38px;
+    color: rgba(185,51,30,1);
+  }
+
+  .lastfm a {
+    background-position-y: -57px;
+    color: rgba(65,83,153,1);
+  }
+
+  .github a {
+    background-position-y: -76px;
+    color: rgba(50,50,50,1);
   }
 }

@@ -9,9 +9,9 @@ $line-height: 1.5em;
 
 // Colors
 $text-color: #222;
-$link-color: black;
-$hover-link-color: black;
-$visited-link-color: black;
+$link-color: rgb(0, 86, 238);
+$hover-link-color: $link-color;
+$visited-link-color: rgb(26, 58, 114);
 
 // Headers
 $h1-size: 2.6em;

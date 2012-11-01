@@ -18,6 +18,12 @@
   color: $selection-color;
 }
 
+a {
+  color: $link-color;
+  &:hover { color: $hover-link-color; }
+  &:visited { color: $visited-link-color; }
+}
+
 /* Container */
 #container { @extend .container_16; }
 
