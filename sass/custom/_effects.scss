@@ -1,23 +1,25 @@
+body {
+  -webkit-transition: all 0.5s ease;
+}
+
 .click {
   -webkit-transition: all 0.5s ease;
   -webkit-transform: translateX(-400px);
 }
 
-.sidebar-about-me-right {
+#about-me {
+  font-size: .8em;
+  color: rgb(211, 211, 211);
+
   right: 0px;
-  width: 400px;
+  width: 360px;
   height: 100%;
   position: fixed;
   display: block; // ?
   padding: 20px;
   overflow: auto;
   background: #333;
+
   -webkit-transition: all 0.5s ease;
   -webkit-transform: translate(100%);
 }
-
-#container {
-  -webkit-transition: all 0.5s ease;
-}
-
-
