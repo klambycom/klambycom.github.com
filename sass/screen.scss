@@ -25,6 +25,7 @@ $h6-size: 1em;
 $selection-color: white;
 $selection-bg-color: #222;
 
+@import "compass";
 @import "custom/reset";
 @import "custom/grid";
 @import "custom/text";
