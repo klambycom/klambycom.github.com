@@ -1,25 +1,26 @@
-window.onload = function() {
-	// Show sidebar
-	var link = document.getElementById("about-me-sidebar").getElementsByTagName("a")[0];
-	var body = document.getElementsByTagName("body")[0];
+window.addEvent('domready', function() {
+	// Sidebar "About me"
+	var link = $("about-me-sidebar").getElements('a')[0];
 	var settings = {
 		show: "&larr; Läs mer om mig!",
 		hide: "&larr; Läs mindre om mig!"
 	}
 
-	link.innerHTML = settings.show;
+	link.set('html', settings.show);
 
-	link.addEventListener("click", function(e) {
-		link.innerHTML = (body.className == "click") ? settings.show : settings.hide;
-		link.classList.toggle("flip");
-		body.classList.toggle("click");
-		e.preventDefault();
-	}, false);
-}
+	link.addEvent("click", function(event) {
+		// Prevent default
+		event.stop();
 
-// Fix!! Don't work in IE!
-// =======================
-//
-// addEventListener
-// innerHTML
-// classList
+		// Change link-text after half transition
+		(function() {
+			this.set('html', ((this.hasClass("flip")) ? settings.hide : settings.show));
+		}).delay(300, this);
+
+		// Mirror link
+		this.toggleClass("flip");
+
+		// Show sidebar
+		document.body.toggleClass("click");
+	});
+});
