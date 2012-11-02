@@ -10,6 +10,13 @@ window.addEvent('domready', function() {
 		fail: "Fail! :'("
 	};
 
+	// Only desktop
+	if (!Browser.Platform.android || !Browser.Platform.ios) {
+		aboutMe(settings);
+	}
+});
+
+var aboutMe = function(settings) {
 	// Sidebar "About me"
 	var link = $("about-me-sidebar").getElements('a')[0];
 	var sidebar = $("about-me");
@@ -58,4 +65,4 @@ window.addEvent('domready', function() {
 		// Show sidebar
 		document.body.toggleClass("click");
 	});
-});
+};
