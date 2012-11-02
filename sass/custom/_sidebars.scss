@@ -37,7 +37,15 @@
 
 // Latest posts
 #recent-post-sidebar {
+  line-height: 1.2em;
+
   a:visited { color: $visited-link-color; }
+
+  footer {
+    a:visited { color: $link-color; }
+    font-size: .7em;
+    margin-bottom: 10px;
+  }
 }
 
 // Categories cloud
