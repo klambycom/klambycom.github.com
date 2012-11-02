@@ -11,7 +11,7 @@ window.addEvent('domready', function() {
 	};
 
 	// Only desktop
-	if (!Browser.Platform.android || !Browser.Platform.ios) {
+	if (!(Browser.Platform.android || Browser.Platform.ios)) {
 		aboutMe(settings);
 	}
 });
