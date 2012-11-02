@@ -1,5 +1,4 @@
 window.addEvent('domready', function() {
-	// Settings
 	var settings = {
 		// Link
 		show: '&larr; Läs mer om mig!',
