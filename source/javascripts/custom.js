@@ -9,31 +9,33 @@ window.addEvent('domready', function() {
 		url: '/om-christian-nilsson',
 		load: 'Laddar...',
 		fail: "Fail! :'("
-	}
+	};
 
 	// Sidebar "About me"
 	var link = $("about-me-sidebar").getElements('a')[0];
 	var sidebar = $("about-me");
+	var loaded = false;
 
-	// Load text for sidebar
-	var req = new Request.HTML({
-		url: settings.url,
-		method: 'get',
-		onRequest: function() {
-			// Loading...
-			sidebar.set('html', settings.load);
-		},
-		onSuccess: function(data, elements) {
-			// SUCCESS!!!11oneone
-			sidebar.set('html', elements.getElement('article')[0].innerHTML);
-			window.ch = elements;
-		},
-		onFailure: function() {
-			// Fail! :'(
-			sidebar.set('html', settings.fail);
-		}
-	});
-	req.send();
+	// Function that load text for sidebar
+	var req = function() {
+		new Request.HTML({
+			url: settings.url,
+			method: 'get',
+			onRequest: function() {
+				// Loading...
+				sidebar.set('html', settings.load);
+			},
+			onSuccess: function(data, elements) {
+				// SUCCESS!!!11oneone
+				sidebar.set('html', elements.getElement('article')[0].innerHTML);
+				loaded = true;
+			},
+			onFailure: function() {
+				// Fail! :'(
+				sidebar.set('html', settings.fail);
+			}
+		}).send();
+	};
 
 	// Set link-text
 	link.set('html', settings.show);
@@ -42,6 +44,9 @@ window.addEvent('domready', function() {
 	link.addEvent("click", function(event) {
 		// Prevent default
 		event.stop();
+
+		// Load text for sidebar if it's needed
+		if (!loaded) { req(); }
 
 		// Change link-text after half transition
 		(function() {
