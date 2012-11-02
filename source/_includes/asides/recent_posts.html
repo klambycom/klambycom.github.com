@@ -3,7 +3,7 @@
   <ul id="recent_posts">
     {% for post in site.posts limit: site.recent_posts %}{% capture category %}{{ post.categories | size }}{% endcapture %}
       <li class="post">
-        <a href="{{ root_url }}{{ post.url }}">{{ post.title }} test</a>
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
         {% if category != '0' %}
         <footer>
           <span class="categories">postad i {{ post.categories | category_links }}</span>
