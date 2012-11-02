@@ -22,4 +22,26 @@ body {
 
   @include transition(all 0.5s ease .7s);
   @include transform(translate(100%));
+
+  a {
+    color: rgb(211, 211, 211);
+    text-decoration: underline;
+    &:hover { text-decoration: none; }
+  }
+
+  .meta { display: none; }
+
+  #hcard-Christian-Anders-Nilsson {
+    font-size: .9em;
+
+    a {
+      color: rgb(211, 211, 211);
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+
+    .photo { width: 110px; }
+  }
+
+  footer { display: none; }
 }
