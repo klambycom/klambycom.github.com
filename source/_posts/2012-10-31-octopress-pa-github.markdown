@@ -6,7 +6,16 @@ comments: true
 categories: [Webbteknisk introduktion, Octopress, Github]
 ---
 
-Lite text om Github pages, jekyll och octopress.
+Github har något som heter Github Pages som gör att man kan ha webbplatser till
+sina repositories, fast bara statiska sidor.
+
+Jekyll är ett (blogg-)program som genererar statiska sidor. Man skriver sina
+blogginlägg i markdown, med lite information om inlägget i YAML-format.
+
+När man laddar upp sina sidor till Github Pages körs filerna genom Jekyll, och
+om det då är markdown görs det om till HTML.
+
+Octopress är baserat på Jekyll, men med ett antal plugins, med mera, förinstallerat.
 
 
 ## Sätta upp bloggen
@@ -54,7 +63,7 @@ _deploy/, och pushar till master branchen.
 Pusha source/ till Github måste du göra manuellt.
 
     git add .
-    git commit -am 'Hello world!'
+    git commit -m 'Hello world!'
     git push origin source
 
 ## Ändra utseendet
@@ -79,5 +88,5 @@ För att koppla en egen domän till din blogg måste du skapa en fil med namnet
 Pusha sen `source/` till Github.
 
     git add .
-    git commit -am 'Created a CNAME for Klamby.com'
+    git commit -m 'Created a CNAME for Klamby.com'
     git push origin source
