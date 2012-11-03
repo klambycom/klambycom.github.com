@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webbteknisk introduktion | Christian Nilsson]]></title>
   <link href="http://klamby.com/kategori/webbteknisk-introduktion/atom.xml" rel="self"/>
   <link href="http://klamby.com/"/>
-  <updated>2012-11-02T17:56:12+01:00</updated>
+  <updated>2012-11-03T01:14:28+01:00</updated>
   <id>http://klamby.com/</id>
   <author>
     <name><![CDATA[Christian Nilsson]]></name>
@@ -18,7 +18,16 @@
     <link href="http://klamby.com/2012/10/31/octopress-pa-github/"/>
     <updated>2012-10-31T11:50:00+01:00</updated>
     <id>http://klamby.com/2012/10/31/octopress-pa-github</id>
-    <content type="html"><![CDATA[<p>Lite text om Github pages, jekyll och octopress.</p>
+    <content type="html"><![CDATA[<p>Github har något som heter Github Pages som gör att man kan ha webbplatser till
+sina repositories, fast bara statiska sidor.</p>
+
+<p>Jekyll är ett (blogg-)program som genererar statiska sidor. Man skriver sina
+blogginlägg i markdown, med lite information om inlägget i YAML-format.</p>
+
+<p>När man laddar upp sina sidor till Github Pages körs filerna genom Jekyll, och
+om det då är markdown görs det om till HTML.</p>
+
+<p>Octopress är baserat på Jekyll, men med ett antal plugins, med mera, förinstallerat.</p>
 
 <h2>Sätta upp bloggen</h2>
 
@@ -67,7 +76,7 @@ bundle exec rake deploy
 <p>Pusha source/ till Github måste du göra manuellt.</p>
 
 <pre><code>git add .
-git commit -am 'Hello world!'
+git commit -m 'Hello world!'
 git push origin source
 </code></pre>
 
@@ -94,7 +103,7 @@ bundle exec rake deploy
 <p>Pusha sen <code>source/</code> till Github.</p>
 
 <pre><code>git add .
-git commit -am 'Created a CNAME for Klamby.com'
+git commit -m 'Created a CNAME for Klamby.com'
 git push origin source
 </code></pre>
 ]]></content>
