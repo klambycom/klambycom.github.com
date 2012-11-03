@@ -29,6 +29,10 @@ intensiteten på 3D-effekten.
 Det kan göras direkt med `transform`-egenskapen, om det bara ska göras på ett 
 element.
 
+<div class="example">
+  <div style="background-color: red; width: 200px; height: 200px; -webkit-transform: perspective(600px) rotateY(45deg); -moz-transform: perspective(600px) rotateY(45deg); -o-transform: perspective(600px) rotateY(45deg); transform: perspective(600px) rotateY(45deg);"></div>
+</div>
+
     #box {
       background-color: red;
       width: 200px;
@@ -41,6 +45,20 @@ element.
 
 När man har flera element som ska ändras måste man sätta
 `perspective`-egenskapen på föräldern istället för att få förväntat resultat.
+
+<div class="example">
+ <div style="width: 200px; height: 200px; -webkit-perspective: 400px; -moz-perspective: 400px; -o-perspective: 400px; perspective: 400px;">
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+  <div style="width: 55px; height: 55px; float: left; margin: 5px; background-color: green; -webkit-transform: rotateX(45deg); -moz-transform: rotateX(45deg); -o-transform: rotateX(45deg); transform: rotateX(45deg);"></div>
+ </div>
+</div>
 
     #container {
       width: 200px;
