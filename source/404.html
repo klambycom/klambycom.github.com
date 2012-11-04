@@ -1,0 +1,31 @@
+---
+layout: page
+title: "404"
+comments: false
+sharing: false
+footer: false
+---
+
+<p>Sidan kunde inte hittas.</p>
+
+<div id="blog-archives" class="missing">
+  <h1>Senaste inläggen</h1>
+  <p>Du letar kanske efter ett av dem senaste inläggen?</p>
+  {% for post in site.posts limit: 10 %}
+  <article>
+    {% include archive_post.html %}
+  </article>
+  {% endfor %}
+</div>
+
+<div id="search" class="missing">
+  <h1>Sök</h1>
+  <p>Google kan kanske hjälpa dig att hitta rätt.</p>
+  <p>
+    <form action="http://google.com/search" method="get">
+      <input type="hidden" name="q" value="site:klamby.com">
+      <input type="text" class="search" name="q" results="0">
+      <input type="submit" value="Sök">
+    </form>
+  </p>
+</div>

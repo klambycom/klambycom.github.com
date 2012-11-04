@@ -63,7 +63,7 @@ article header {
 }
 
 /* Article */
-article:not(:nth-last-child(2)) {
+.blog-index article:not(:nth-last-child(2)) {
   margin-bottom: 100px;
 }
 
@@ -161,5 +161,16 @@ pre {
     font-family: $sans-serif;
 
     .year { display: none; }
+  }
+}
+
+/* 404 */
+.missing {
+  color: #aaa;
+
+  h1 {
+    font-size: 1.5em;
+    color: $text-color;
+    margin-bottom: .3em;
   }
 }
