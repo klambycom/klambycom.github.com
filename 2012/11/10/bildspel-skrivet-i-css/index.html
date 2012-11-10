@@ -5,10 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="sv"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Christian Nilsson - Christian Nilsson</title>
+  <title>Bildspel skrivet i CSS - Christian Nilsson</title>
   <meta name="author" content="Christian Nilsson">
   
-  <meta name="description" content="Christian Nilsson Nov 1st, 2012 Anders Christian Nilsson Linnéuniversitetet, Student christian@klamby.com 0733914177 Bruksgatan 1 380 62 Mörbylånga &hellip;">
+  <meta name="description" content="Jag hade en väldigt produktiv kväll igår. Jag lärde mig mycket mer om CSS3
+animation, keyframes, Sass och Compass, när jag gjorde ett bildspel i bara &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,13 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   
-  <link rel="canonical" href="http://klamby.com/om-christian-nilsson/">
+  <link rel="canonical" href="http://klamby.com/2012/11/10/bildspel-skrivet-i-css/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <link href="/atom.xml" rel="alternate" title="Christian Nilsson" type="application/atom+xml">
-  
+  <link href="/stylesheets/post-slideshow.css" media="screen, projection" rel="stylesheet" type="text/css">
   
   
   <script type="text/javascript">
@@ -50,12 +51,15 @@
       </header>
 
       <section id="content">
-        <div>
-<article role="article">
-  
+                <article class="grid_11" role="article">
+          
   <header>
-    <h1 class="entry-title">Christian Nilsson</h1>
-    <p class="meta">
+    
+      <h1 class="entry-title">Bildspel Skrivet I CSS</h1>
+    
+    
+      <p class="meta">
+        
 
 
 
@@ -67,70 +71,142 @@
   
 
 
-<time datetime="2012-11-01T13:03:00+01:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time></p>
+<time datetime="2012-11-10T00:57:00+01:00" pubdate data-updated="true">Nov 10<span>th</span>, 2012</time>
+      </p>
+    
   </header>
-  
-  <div id="hcard-Christian-Anders-Nilsson" class="vcard">
- <img src="http://www.gravatar.com/avatar/9111d52badda5eb1be20947fe3a49d79?s=120" alt="Bild på Christian Nilsson" class="photo"/>
- <a class="url fn n" href="http://www.klamby.com"><strong><span class="additional-name">Anders</span> <span class="given-name">Christian</span> <span class="family-name">Nilsson</span></strong></a>
- <div><span class="org">Linnéuniversitetet</span>, <span class="role">Student</span></div>
- <a class="email" href="mailto:christian@klamby.com">christian@klamby.com</a>
- <div class="tel">0733914177</div>
 
- <div class="adr">
-  <div class="street-address">Bruksgatan 1</div>
-  <span class="postal-code">380 62</span> 
-  <span class="locality">Mörbylånga</span>, 
-  <span class="region">Södra Öland</span>, 
-  <span class="country-name">Sweden</span>
+
+<div class="entry-content"><p>Jag hade en väldigt produktiv kväll igår. Jag lärde mig mycket mer om CSS3
+animation, keyframes, Sass och Compass, när jag gjorde ett bildspel i bara CSS.
+Det blev även mitt första Ruby gem, <a href="https://rubygems.org/gems/css3slideshow">CSS3Slideshow</a>.
+<a href="https://github.com/klambycom/css3-slideshow">Koden finns på Github</a>.</p>
+
+<!-- more -->
+
+
+
+
+<div id="content-slider">
+ <div id="slider">
+  <div id="mask">
+   <ul><li class="slide-img"> <a href="#"><img src="/images/slide-1.jpg" alt="Traktor"></a></li></ul>
+   <ul><li class="slide-img"><a href="#"><img src="/images/slide-2.jpg" alt="Dator"></a></li></ul>
+   <ul><li class="slide-img"><a href="#"><img src="/images/slide-3.jpg" alt="Musik"></a></li></ul>
+  </div>
+  <div class="progress-bar"></div>
  </div>
 </div>
 
 
-<h2>Presentation</h2>
+<h2>Såhär använder du bildspelet</h2>
 
-<p>Mitt namn är Christian Nilsson och jag kommer från Sjöbo i Skåne. Jag är uppvuxen på en gård och har jobbat med lantbruk fram till jag började läsa <a href="http://www.webbprogrammerare.se/">Webbprogrammerare</a> på <a href="http://www.lnu.se/">LNU</a>.</p>
+<p>CSS3Slideshow använder Sass 3.2, Compass 0.12 och Animation 0.1. Först måste du
+installera CSS3Slideshow, <code>gem install css3slideshow</code>. Och lägga till <code>require
+'css3slideshow'</code> i din ruby-fil, config.rb om sidan är genererad av Compass.</p>
 
-<p>När jag gick i mellanstadiet fick jag en diskett av min kusin med en html-kurs på. Sen dess har jag varit väldigt intresserad av html och senare också php. När jag var 14-15 år gjorde jag en webbplats med en massa flash-spel, som blev så populär på skolorna i Sjöbo att den blev blockerad.</p>
+<p>Din HTML bör se ut ungeför såhär:</p>
 
-<p>Jag sökte till Webbprogrammerare efter att jag hade sett <a href="http://www.youtube.com/user/leitet">föreläsningar på Youtube</a> från Webbteknik I, Webbteknik II och hört <a href="http://webbradion.net/avsnitt/38">avsnittet från Webbradion med Johan Leitet</a>. Jag har läst ett par distanskurser på andra universitet.</p>
+<pre><code>&lt;div id="content-slider"&gt;
+  &lt;div id="slider"&gt;
+    &lt;div id="mask"&gt;
 
-<p>Jag har programmerat ganska mycket innan jag började plugga och på senaste tiden har det blivit mest Ruby.</p>
+      &lt;ul&gt;
+        &lt;li class="slide-img"&gt;
+          &lt;a href="#"&gt;&lt;img src="images/2.jpg" alt="Traktor"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul&gt;
+        &lt;li class="slide-img"&gt;
+          &lt;a href="#"&gt;&lt;img src="images/3.jpg" alt="Dator"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul&gt;
+        &lt;li class="slide-img"&gt;
+          &lt;a href="#"&gt;&lt;img src="images/8.jpg" alt="Musik"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;div class="progress-bar"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Id och class går att ändra med:</p>
+
+<ul>
+<li><code>$slide_slideshow: "#content-slider";</code></li>
+<li><code>$slide_slider: "#slider";</code></li>
+<li><code>$slide_mask: "#mask";</code></li>
+<li><code>$slide_progress_bar: ".progress-bar";</code></li>
+</ul>
+
+
+<p>Sass-filen bör innehålla minst:</p>
+
+<pre><code>$slide_nr_of_images: 3;
+$slide_img_width: 680px;
+$slide_img_height: 320px;
+
+@import "css3slideshow";
+</code></pre>
+
+<p>Om det inte fungerar får du gärna skicka ett epost eller skriva till mig på
+Twitter. Som sagt det är mitt första gem, jag kan ha gjort fel.</p>
+</div>
+
+
+          <footer>
+            <p class="meta">
+              
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Christian Nilsson</span></span>
+
+              
+
+
+
+
+
+
+
 
   
-    <footer>
-      <p class="meta">
-        
-        
 
 
+<time datetime="2012-11-10T00:57:00+01:00" pubdate data-updated="true">Nov 10<span>th</span>, 2012</time>
+              
 
-
-
-
-
-
+<span class="categories">
   
-
-
-<time datetime="2012-11-01T13:03:00+01:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
-        
-      </p>
-      
-        <div class="sharing">
+    <a class='category' href='/kategori/webbteknisk-introduktion/'>Webbteknisk introduktion</a>
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://klamby.com/om-christian-nilsson/index.html" data-via="Klambycom" data-counturl="http://klamby.com/om-christian-nilsson/index.html" >Tweet</a>
+</span>
+
+
+            </p>
+            
+              <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://klamby.com/2012/11/10/bildspel-skrivet-i-css/" data-via="Klambycom" data-counturl="http://klamby.com/2012/11/10/bildspel-skrivet-i-css/" >Tweet</a>
   
   
   
 </div>
 
-      
-    </footer>
-  
-</article>
-
-</div>
+            
+            <p class="meta">
+              
+                <a class="left" href="/2012/10/31/octopress-pa-github/" title="Förra inlägget: Octopress på Github">&laquo; Octopress på Github</a>
+              
+              
+            </p>
+          </footer>
+        </article>
 
       </section>
 
