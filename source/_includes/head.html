@@ -22,6 +22,7 @@
   <link href="{{ root_url }}/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
   <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  {% if page.css %}<link href="{{ root_url }}/stylesheets/post-{{ page.css }}.css" media="screen, projection" rel="stylesheet" type="text/css">{% endif %}
   {% include custom/head.html %}
   {% include google_analytics.html %}
 </head>
