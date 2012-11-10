@@ -1,4 +1,6 @@
 # Require any additional compass plugins here.
+require 'css3slideshow'
+
 project_type = :stand_alone
 
 # Publishing paths
