@@ -12,6 +12,8 @@ animation, keyframes, Sass och Compass, när jag gjorde ett bildspel i bara CSS.
 Det blev även mitt första Ruby gem, [CSS3Slideshow](https://rubygems.org/gems/css3slideshow).
 [Koden finns på Github](https://github.com/klambycom/css3-slideshow).
 
+<!-- more -->
+
 <div id="content-slider">
  <div id="slider">
   <div id="mask">
