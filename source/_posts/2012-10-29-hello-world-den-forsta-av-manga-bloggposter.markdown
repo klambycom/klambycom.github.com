@@ -16,6 +16,7 @@ denna kursen handlar om html och css,  och sen kändes det lockande att kunna
 skriva blogginläggen i Vim och sen pusha dem till Github som står för
 hostingen.
 
+<!-- more -->
 
 ## Teknikerna jag kommer använda
 
