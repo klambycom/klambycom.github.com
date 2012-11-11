@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webbteknisk introduktion | Christian Nilsson]]></title>
   <link href="http://klamby.com/kategori/webbteknisk-introduktion/atom.xml" rel="self"/>
   <link href="http://klamby.com/"/>
-  <updated>2012-11-10T02:14:02+01:00</updated>
+  <updated>2012-11-12T00:53:28+01:00</updated>
   <id>http://klamby.com/</id>
   <author>
     <name><![CDATA[Christian Nilsson]]></name>
@@ -116,6 +116,9 @@ om det då är markdown görs det om till HTML.</p>
 
 <p>Octopress är baserat på Jekyll, men med ett antal plugins, med mera, förinstallerat.</p>
 
+<!-- more -->
+
+
 <h2>Sätta upp bloggen</h2>
 
 <p>Du måste ha minst <a href="http://www.ruby-lang.org/en/">Ruby</a> 1.9.2 för att kunna köra
@@ -210,6 +213,9 @@ förhoppningsvis kommer jag forsätta blogga även efter kursen.</p>
 denna kursen handlar om html och css,  och sen kändes det lockande att kunna
 skriva blogginläggen i Vim och sen pusha dem till Github som står för
 hostingen.</p>
+
+<!-- more -->
+
 
 <h2>Teknikerna jag kommer använda</h2>
 

@@ -135,85 +135,12 @@ om det då är markdown görs det om till HTML.</p>
 
 <p>Octopress är baserat på Jekyll, men med ett antal plugins, med mera, förinstallerat.</p>
 
-<h2>Sätta upp bloggen</h2>
-
-<p>Du måste ha minst <a href="http://www.ruby-lang.org/en/">Ruby</a> 1.9.2 för att kunna köra
-Octopress. Jag vet inte hur man gör på Windows, men i Mac OS X och Linux kan du
-köra:</p>
-
-<pre><code>git clone git://github.com/imathis/octopress.git octopress
-cd octopress
-bundle install
-bundle exec rake install
-</code></pre>
-
-<p>Detta kommer klona Octopress från Github till mappen octopress, installera alla
-gems som behövs och tillslut installera Octopress standardtema.</p>
-
-<p>För att hosta bloggen på Github måste du skapa ett repository med namnet
-<code>&lt;användarnamn&gt;.github.com</code>. Sen fixar <code>rake setup_github_pages</code> resten.</p>
-
-<h2>Inställningar</h2>
-
-<p>Inställningarna finns i <code>_config.yml</code> och är ganska självförklarande.</p>
-
-<h2>Första inlägget</h2>
-
-<pre><code>rake new_post["Hello world"]
-</code></pre>
-
-<p>Kommandot kommer skapa en ny fil i <code>source/_posts</code> med filnamnet
-<code>ÅÅÅÅ-MM-DD-hello-world.markdown</code>, det är i denna filen du skrivet ditt
-blogginlägg. Mer info om <a href="http://daringfireball.net/projects/markdown/basics">Markdown</a>
-och dess <a href="http://daringfireball.net/projects/markdown/syntax">syntax</a>.</p>
-
-<p>Överst i filen hittar du
-<a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter">information om blogginlägget i YAML-format</a>.
-Ett tips är att lägga till <code>published: false</code> under tiden du skriver inlägget
-för att det inte ska synas, även om du pushar till Github.</p>
-
-<p>När du har skrivit färdigt inlägget genererar du html-filerna i mappen
-_deploy/, och pushar till master branchen.</p>
-
-<pre><code>bundle exec rake generate
-bundle exec rake deploy
-</code></pre>
-
-<p>Pusha source/ till Github måste du göra manuellt.</p>
-
-<pre><code>git add .
-git commit -m 'Hello world!'
-git push origin source
-</code></pre>
-
-<h2>Ändra utseendet</h2>
-
-<p>Man ändrar utseendet i <code>sass/custom/</code> men kom ihåg att lägga till filerna du
-har ändrat till <code>sass/screen.scss</code>.</p>
-
-<p>Ändra CSS är enkelt, det är tyvärr inte HTML. Filerna finns utspridda lite
-överallt i <code>source/</code>. Om du letar lite hittar du tillslut den filen du vill
-ändra.</p>
-
-<h2>Egen domän</h2>
-
-<p>För att koppla en egen domän till din blogg måste du skapa en fil med namnet
-<code>CNAME</code> i <code>source/</code>.</p>
-
-<pre><code>cd source
-echo 'klamby.com' &gt;&gt; CNAME
-bundle exec rake generate
-bundle exec rake deploy
-</code></pre>
-
-<p>Pusha sen <code>source/</code> till Github.</p>
-
-<pre><code>git add .
-git commit -m 'Created a CNAME for Klamby.com'
-git push origin source
-</code></pre>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/2012/10/31/octopress-pa-github/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -256,29 +183,12 @@ denna kursen handlar om html och css,  och sen kändes det lockande att kunna
 skriva blogginläggen i Vim och sen pusha dem till Github som står för
 hostingen.</p>
 
-<h2>Teknikerna jag kommer använda</h2>
-
-<p>Teknikerna jag kommer använda är HTML5, CSS3, <a href="http://sass-lang.com">Sass</a> och
-<a href="http://liquidmarkup.org/">Liquid</a>. HTML5 kan jag ganska bra sen innan, iaf dem
-nya och omarbetade taggarna. Sass har jag använt innan.</p>
-
-<p>Det som är mest nytt för mig är CSS3 och Liquid. CSS3 har jag lite erfarenhet
-av men det enda avancerade jag har gjort är
-<a href="http://homepage.lnu.se/student/cn222gc/fotogalleri">ett fotoalbum</a> i Webbteknisk
-introduktion, och i detta projektet har jag tänkt använda transition,
-box-shadow, rundade hörn m.m.</p>
-
-<p>Jag kommer använda ett css-ramverk, men jag vet inte vilket än. Jag har ingen
-erfarenhet av något så jag kommer välja ett som är responsivt, snyggt och har
-bra dokumentation. Just nu står mitt val mellan
-<a href="http://twitter.github.com/bootstrap/">Bootstrap</a> och
-<a href="http://foundation.zurb.com/">Fundation 3</a>.</p>
-
-<p>Jag kommer nog behöva använda javascript för att kunna göra vissa saker som jag
-vill göra, men det är inget avancerat så jag kommer nog klara av det med mina
-nuvarande kunskaper.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/2012/10/29/hello-world-den-forsta-av-manga-bloggposter/">Read on &rarr;</a>
+    </footer>
   
 
 

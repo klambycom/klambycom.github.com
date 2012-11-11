@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Christian Nilsson]]></title>
   <link href="http://klamby.com/kategori/octopress/atom.xml" rel="self"/>
   <link href="http://klamby.com/"/>
-  <updated>2012-11-10T02:14:02+01:00</updated>
+  <updated>2012-11-12T00:53:28+01:00</updated>
   <id>http://klamby.com/</id>
   <author>
     <name><![CDATA[Christian Nilsson]]></name>
@@ -28,6 +28,9 @@ blogginlägg i markdown, med lite information om inlägget i YAML-format.</p>
 om det då är markdown görs det om till HTML.</p>
 
 <p>Octopress är baserat på Jekyll, men med ett antal plugins, med mera, förinstallerat.</p>
+
+<!-- more -->
+
 
 <h2>Sätta upp bloggen</h2>
 
@@ -123,6 +126,9 @@ förhoppningsvis kommer jag forsätta blogga även efter kursen.</p>
 denna kursen handlar om html och css,  och sen kändes det lockande att kunna
 skriva blogginläggen i Vim och sen pusha dem till Github som står för
 hostingen.</p>
+
+<!-- more -->
+
 
 <h2>Teknikerna jag kommer använda</h2>
 
