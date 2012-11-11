@@ -17,6 +17,7 @@ om det då är markdown görs det om till HTML.
 
 Octopress är baserat på Jekyll, men med ett antal plugins, med mera, förinstallerat.
 
+<!-- more -->
 
 ## Sätta upp bloggen
 
