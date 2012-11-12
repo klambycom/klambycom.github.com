@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[HTML, CSS och Javascript | Christian Nilsson]]></title>
+  <link href="http://klamby.com/kategori/html-css-och-javascript/atom.xml" rel="self"/>
+  <link href="http://klamby.com/"/>
+  <updated>2012-11-12T16:33:00+01:00</updated>
+  <id>http://klamby.com/</id>
+  <author>
+    <name><![CDATA[Christian Nilsson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bildspel skrivet i CSS]]></title>
+    <link href="http://klamby.com/2012/11/10/bildspel-skrivet-i-css/"/>
+    <updated>2012-11-10T00:57:00+01:00</updated>
+    <id>http://klamby.com/2012/11/10/bildspel-skrivet-i-css</id>
+    <content type="html"><![CDATA[<p>Jag hade en väldigt produktiv kväll igår. Jag lärde mig mycket mer om CSS3
+animation, keyframes, Sass och Compass, när jag gjorde ett bildspel i bara CSS.
+Det blev även mitt första Ruby gem, <a href="https://rubygems.org/gems/css3slideshow">CSS3Slideshow</a>.
+<a href="https://github.com/klambycom/css3-slideshow">Koden finns på Github</a>.</p>
+
+<!-- more -->
+
+
+
+
+<div id="content-slider">
+ <div id="slider">
+  <div id="mask">
+   <ul><li class="slide-img"> <a href="#"><img src="http://klamby.com/images/slide-1.jpg" alt="Traktor"></a></li></ul>
+   <ul><li class="slide-img"><a href="#"><img src="http://klamby.com/images/slide-2.jpg" alt="Dator"></a></li></ul>
+   <ul><li class="slide-img"><a href="#"><img src="http://klamby.com/images/slide-3.jpg" alt="Musik"></a></li></ul>
+  </div>
+  <div class="progress-bar"></div>
+ </div>
+</div>
+
+
+<h2>Såhär använder du bildspelet</h2>
+
+<p>CSS3Slideshow använder Sass 3.2, Compass 0.12 och Animation 0.1. Först måste du
+installera CSS3Slideshow, <code>gem install css3slideshow</code>. Och lägga till <code>require
+'css3slideshow'</code> i din ruby-fil, config.rb om sidan är genererad av Compass.</p>
+
+<p>Din HTML bör se ut ungeför såhär:</p>
+
+<pre><code>&lt;div id="content-slider"&gt;
+  &lt;div id="slider"&gt;
+    &lt;div id="mask"&gt;
+
+      &lt;ul&gt;
+        &lt;li class="slide-img"&gt;
+          &lt;a href="#"&gt;&lt;img src="images/2.jpg" alt="Traktor"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul&gt;
+        &lt;li class="slide-img"&gt;
+          &lt;a href="#"&gt;&lt;img src="images/3.jpg" alt="Dator"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul&gt;
+        &lt;li class="slide-img"&gt;
+          &lt;a href="#"&gt;&lt;img src="images/8.jpg" alt="Musik"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;div class="progress-bar"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Id och class går att ändra med:</p>
+
+<ul>
+<li><code>$slide_slideshow: "#content-slider";</code></li>
+<li><code>$slide_slider: "#slider";</code></li>
+<li><code>$slide_mask: "#mask";</code></li>
+<li><code>$slide_progress_bar: ".progress-bar";</code></li>
+</ul>
+
+
+<p>Sass-filen bör innehålla minst:</p>
+
+<pre><code>$slide_nr_of_images: 3;
+$slide_img_width: 680px;
+$slide_img_height: 320px;
+
+@import "css3slideshow";
+</code></pre>
+
+<p>Om det inte fungerar får du gärna skicka ett epost eller skriva till mig på
+Twitter. Som sagt det är mitt första gem, jag kan ha gjort fel.</p>
+]]></content>
+  </entry>
+  
+</feed>
