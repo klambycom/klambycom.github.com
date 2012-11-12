@@ -1,4 +1,5 @@
 window.addEvent('domready', function() {
+	// About me sidebar
 	// Only desktop
 	if (!(Browser.Platform.android || Browser.Platform.ios)) {
 		new AboutMe({
@@ -12,6 +13,12 @@ window.addEvent('domready', function() {
 			fail: "Fail! :'("
 		}).run();
 	}
+
+	// Pretty date
+	var times = $('recent_posts').getElements('time');
+	for (var i = 0; i < times.length; i++) {
+		times[i].set('html', 'för ' + prettyDate(times[i].getAttribute('datetime')));
+	};
 });
 
 function AboutMe(settings) {
@@ -70,3 +77,30 @@ AboutMe.prototype.run = function() {
 		document.body.toggleClass("click");
 	});
 };
+
+/*
+ * JavaScript Pretty Date
+ * Copyright (c) 2011 John Resig (ejohn.org)
+ * Licensed under the MIT and GPL licenses.
+ */
+
+// Takes an ISO time and returns a string representing how
+// long ago the date represents.
+function prettyDate(time){
+	var date = new Date((time || "").replace(/-/g,"/").replace(/[TZ]/g," ")),
+		diff = (((new Date()).getTime() - date.getTime()) / 1000),
+		day_diff = Math.floor(diff / 86400);
+			
+	if ( isNaN(day_diff) || day_diff < 0 || day_diff >= 31 )
+		return;
+			
+	return day_diff == 0 && (
+			diff < 60 && "nyss" ||
+			diff < 120 && "en minut sedan" ||
+			diff < 3600 && Math.floor( diff / 60 ) + " minuter sedan" ||
+			diff < 7200 && "en timme sedan" ||
+			diff < 86400 && Math.floor( diff / 3600 ) + " timmar sedan") ||
+		day_diff == 1 && "igår" ||
+		day_diff < 7 && day_diff + " dagar sedan" ||
+		day_diff < 31 && Math.ceil( day_diff / 7 ) + " veckor sedan";
+}

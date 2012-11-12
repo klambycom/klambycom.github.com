@@ -6,7 +6,9 @@
         <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
         {% if category != '0' %}
         <footer>
-          <span class="categories">postad i {{ post.categories | category_links }}</span>
+          <span class="categories">
+            postad <time datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date_formatted }}</time>
+          </span>
         </footer>
         {% endif %}
       </li>
