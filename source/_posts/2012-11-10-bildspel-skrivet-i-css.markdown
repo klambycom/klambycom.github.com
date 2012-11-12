@@ -3,7 +3,7 @@ layout: post
 title: "Bildspel skrivet i CSS"
 date: 2012-11-10 00:57
 comments: true
-categories: [Webbprogrammerare, 'HTML, CSS och Javascript']
+categories: [Webbprogrammerare, HTML & CSS]
 css: slideshow
 ---
 
