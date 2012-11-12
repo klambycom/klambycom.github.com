@@ -3,7 +3,7 @@ layout: post
 title: "Hello World: Den första av många bloggposter"
 date: 2012-10-29 21:57
 comments: true
-categories: [Webbteknisk introduktion, Github, Octopress]
+categories: [Webbprogrammerare]
 ---
 
 Denna bloggen är skapad för mitt porjekt i 

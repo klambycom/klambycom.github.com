@@ -3,7 +3,7 @@ layout: post
 title: "Octopress på Github"
 date: 2012-10-31 11:50
 comments: true
-categories: [Webbteknisk introduktion, Octopress, Github]
+categories: [Webbprogrammerare]
 ---
 
 Github har något som heter Github Pages som gör att man kan ha webbplatser till
