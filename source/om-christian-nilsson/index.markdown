@@ -29,6 +29,6 @@ Mitt namn är Christian Nilsson och jag kommer från Sjöbo i Skåne. Jag är up
 
 När jag gick i mellanstadiet fick jag en diskett av min kusin med en html-kurs på. Sen dess har jag varit väldigt intresserad av html och senare också php. När jag var 14-15 år gjorde jag en webbplats med en massa flash-spel, som blev så populär på skolorna i Sjöbo att den blev blockerad.
 
-Jag sökte till Webbprogrammerare efter att jag hade sett [föreläsningar på Youtube](http://www.youtube.com/user/leitet) från Webbteknik I, Webbteknik II och hört [avsnittet från Webbradion med Johan Leitet](http://webbradion.net/avsnitt/38). Jag har läst ett par distanskurser på andra universitet.
+Jag sökte till Webbprogrammerare efter att jag hade sett [föreläsningar på Youtube](http://www.youtube.com/user/leitet) från Webbteknik I och hört [avsnittet från Webbradion med Johan Leitet](http://webbradion.net/avsnitt/38). Jag har läst ett par distanskurser på andra universitet.
 
 Jag har programmerat ganska mycket innan jag började plugga och på senaste tiden har det blivit mest Ruby.
