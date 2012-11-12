@@ -4,7 +4,7 @@
   <title><![CDATA[Webbprogrammerare | Christian Nilsson]]></title>
   <link href="http://klamby.com/kategori/webbprogrammerare/atom.xml" rel="self"/>
   <link href="http://klamby.com/"/>
-  <updated>2012-11-12T16:33:00+01:00</updated>
+  <updated>2012-11-12T19:14:17+01:00</updated>
   <id>http://klamby.com/</id>
   <author>
     <name><![CDATA[Christian Nilsson]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hur gick projektet?]]></title>
+    <link href="http://klamby.com/2012/11/12/hur-gick-projektet/"/>
+    <updated>2012-11-12T19:14:00+01:00</updated>
+    <id>http://klamby.com/2012/11/12/hur-gick-projektet</id>
+    <content type="html"><![CDATA[<h2>HTML, CSS och javascript</h2>
+
+<p>Jag har bara gjort ganska små ändringar till den HTML som fanns från början,
+eftersom den redan var bra strukturerad. Och utseendet har jag såklart ändrat
+i CSS.</p>
+
+<p>Jag har lärt mig mycket om CSS3 transition, animation och keyframes. Jag har
+blivit mycket bättre på Sass och Compass, men det finns fortfarande mycket mer
+jag måste lära mig om Compass.</p>
+
+<!-- more -->
+
+
+<p>Jag har inte skrivit så mycket Javascript, men det har fått mig att se fram
+emot nästa kurs som handlar om Javascript.</p>
+
+<h2>SEO</h2>
+
+<p>Jag har registrerat mig hos Google Webmaster Tools och laggt till min
+sitemap.xml. Jag har även laggt in <a href="http://schema.org/">strukurerad data</a>.</p>
+
+<p>Octopress lägger automatisk in början från ett blogginlägg som
+META-description, men man kan lägga till <code>description: "Text"</code> för att
+skriva egen text.</p>
+
+<p>Jag har läst och försökt följa råden på <a href="http://www.seo-guiden.se/">seo-guiden.se</a>
+och i <a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.se/sv/se/intl/sv/webmasters/docs/search-engine-optimization-starter-guide-sv.pdf">Grundhandbok om sökmotoroptimering</a>.</p>
+
+<p>Som jag har förstått punkt 4 &amp; 5 i blogginlägget <a href="http://www.sokmotorkonsult.se/seo/10-on-site-missar">10 on-site missar</a>
+är det dåligt med för många internlänkar, eftersom varje länk blir mindre värd.
+Därför har jag valt att ha färre och bredare kategorier, t.ex. istället för att
+ha en kategori för varje kurs till <a href="http://webbprogrammerare.se">Webbprogrammerare</a>
+har jag en kategori.</p>
+
+<p>För att få kategorierna att hamna hos Google har jag valt att skriva unik text
+till varje kategori. Just nu har jag bara hunnit börja på texten på
+<a href="http://klamby.com/kategori/webbprogrammerare">Webbprogrammerare</a>.</p>
+
+<h2>WCAG</h2>
+
+<p>Enligt <a href="http://achecker.ca/checker/index.php">Achecker.ca</a> klarar jag
+riktlinjerna för WCAG 2.0 AAA. Enligt <a href="http://www.cynthiasays.com/">Cynthia Says</a>
+klarade jag riktlinjerna för WCAG 1.0 Priority 2. Jag har även gått igenom
+<a href="http://www.w3.org/TR/WCAG10/full-checklist.html">W3C WCAG 1.0 checklist</a>.</p>
+
+<p>Sidan klarar WCAG 2.0 AAAs riktlinjer för kontrast mellan färgerna enligt
+<a href="http://snook.ca/technical/colour_contrast/colour.html">Colour Contrast Check</a>.</p>
+
+<p>Jag testade även sidan med <a href="http://colorfilter.wickline.org/">Colorblind Web Page Filter</a>.</p>
+
+<h2>Framtiden för bloggen</h2>
+
+<p>Jag tänkte att jag skulle blogga samtidigt som jag byggde bloggen, och det har
+jag gjort, men dem flesta inläggen har inte blivit färdiga och publiserade. Jag
+kommer antagligen skriva färdigt dem.</p>
+
+<p>Jag har fått många ideér på vad jag ska gör, så jag kommer forsätta att försöka
+förbättra bloggen. Det finns t.ex. forfarande mycket mer jag kan göra inom
+sökmotoroptimering, och detta känns som ett bra ställe att experementera på.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bildspel skrivet i CSS]]></title>
