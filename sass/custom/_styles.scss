@@ -64,12 +64,12 @@ article header {
 
 /* Article */
 .blog-index article:not(:nth-last-child(2)) {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 /* Article footer */
 article > footer {
-  padding-bottom: 2.5em;
+  padding-bottom: 2em;
   margin-top: 2em;
   font-size: .8em;
   font-family: $sans-serif;
