@@ -8,8 +8,8 @@ description: > # this means to ignore newlines until "baseurl:"
   och ska börja blogga igen.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://klamby.com" # the base hostname & protocol for your site
-twitter_username: klambycom
-#github_username:  klambycom
+#twitter_username: klambycom
+github_username:  klambycom
 permalink: /:year/:month/:day/:title/
 
 # Build settings
