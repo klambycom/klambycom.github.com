@@ -1,1 +1,0 @@
-h1{font-size:2em}a{color:black;text-decoration:none}a:link:after,a:visited:after{content:" (" attr(href) ")";font-size:70%}a[href^="/"]:after{content:" (http://klamby.com" attr(href) ") "}.meta{font-size:.6em}.example,.pagination,#sidebar{display:none}
