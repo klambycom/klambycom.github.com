@@ -1,0 +1,16 @@
+# Site settings
+title: Christian Nilsson
+email: christian@klamby.com
+description: > # this means to ignore newlines until "baseurl:"
+  Hej,<br>
+  Jag heter Christian Nilsson, och jag skapade denna bloggen 2012 när jag
+  pluggade första året på Webbprogrammerare på LNU. Nu går jag tredje året
+  och ska börja blogga igen.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://klamby.com" # the base hostname & protocol for your site
+twitter_username: klambycom
+#github_username:  klambycom
+permalink: /:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown

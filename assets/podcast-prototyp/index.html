@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Podcat</title>
+    <style>
+      html, body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      a {
+        color: rgb(76, 101, 168);
+      }
+
+      .player {
+        background-color: rgb(68, 67, 67);
+        color: white;
+        padding: 10px;
+        min-height: 75px;
+      }
+
+      .player h1 {
+        font-size: 1em;
+      }
+
+      .feed {
+        padding: 5px;
+        height: 300px;
+        overflow: scroll;
+      }
+
+      .episode {
+        padding: 5px;
+        position: relative;
+        display: block;
+      }
+
+      .episode img {
+        height: 35px;
+        float: left;
+        padding-right: 5px;
+      }
+
+      .title {
+        display: block;
+        font-weight: bold;
+      }
+
+      .author {
+        font-style: italic;
+      }
+
+      .playOrDownload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 5px;
+        width: 40px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <!-- Libraries -->
+    <script src="lib/react.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/YQL.js"></script>
+
+    <!-- Components -->
+    <script src="build/PlayOrDownload.js"></script>
+    <script src="build/Episode.js"></script>
+    <script src="build/Feed.js"></script>
+    <script src="build/Player.js"></script>
+    <script src="build/Application.js"></script>
+  </body>
+</html>

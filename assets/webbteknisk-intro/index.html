@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Webbsideprojekt i Webbteknisk Introduktion</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="blogg" class="step slide" data-x="-1000" data-y="-1500">
+      <img src="images/bloggen.png" alt="Skärmdump på sidan" style="width: 100%;">
+    </div>
+
+    <div id="octopress" class="step" data-x="1000" data-y="800" data-scale="5">
+      <h1>Vad är Octopress?</h1>
+    </div>
+
+    <div id="markdown" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+      <p><img src="images/markdown.png" alt="Blogginlägg görs i markdown"></p>
+    </div>
+
+    <div id="tekniker" class="step" data-x="5500" data-y="-850" data-rotate="270" data-scale="6">
+      <p>
+        <ul>
+          <li>HTML(5)</li>
+          <li>CSS(3)</li>
+          <li>Sass</li>
+          <li>Compass</li>
+          <li>Lite javascript</li>
+        </ul>
+      </p>
+    </div>
+
+    <div id="sass-variabler" class="step" data-x="4000" data-y="-3500" data-scale="3">
+      <img src="images/sass-variables.png" alt="Variabler i Sass">
+      <img src="images/links.png" alt="Exempel på vanliga länkar och besökta länkar">
+    </div>
+
+    <div id="sass-header" class="step" data-x="6000" data-y="-3500" data-scale="2">
+      <img src="images/header.png" alt="Csskoden för #header">
+    </div>
+
+    <div id="animations" class="step" data-x="12000" data-y="-3500" data-scale="3">
+      <img src="images/ommig.gif" alt="Animering som visar hur sidebaren om mig fungerar">
+      <img src="images/kategorier.gif" alt="Animering som visar hur kategorilänkarna fungerar">
+    </div>
+
+    <div id="compass" class="step" data-x="9100" data-y="-3500" data-scale="3">
+      <img src="images/compass.png" alt="Bilden visar hur man kan använda compass för att slippa använda vendor prefix">
+    </div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
