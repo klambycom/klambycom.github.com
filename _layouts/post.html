@@ -14,10 +14,13 @@ layout: default
 
 </div>
 
+{% if page.comments %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = 'klambycom'; // required: replace example with your forum shortname
+var disqus_identifier = '{{page.title}}';
+var dispus_title = '{{page.title}}';
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
@@ -27,4 +30,4 @@ var disqus_shortname = 'klambycom'; // required: replace example with your forum
  })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
+{% endif %}
