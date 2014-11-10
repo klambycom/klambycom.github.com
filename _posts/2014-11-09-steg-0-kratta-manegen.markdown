@@ -12,12 +12,12 @@ Jag har försökt skriva lite Javascript i alla kurser, och i kursen Individuell
 mjukvaruutvecklingsprojekt skapade jag webbplatsen/spelet [Skissa och
 gissa](http://skissaochgissa.se) i Javascript och NodeJs.
 
-John Resigs interaktiva lektion var väldigt intressant, och perfekt för att
-fräsha upp kunskaperna. Jag tror jag kunde allt sedan innan, men vissa saker
-hade jag glömt bort.
+[John Resigs interaktiva lektion](http://ejohn.org/apps/learn/) var väldigt
+intressant, och perfekt för att fräsha upp kunskaperna. Jag tror jag kunde allt
+sedan innan, men vissa saker hade jag glömt bort.
 
 Jag hade till exempel glömt att man kan få reda på antalet argument till en
-funktion med ´length´. Det borde gå att använda för att göra currying möjligt
+funktion med `length`. Det borde gå att använda för att göra currying möjligt
 och frivilligt för alla funktioner.
 
 {% highlight javascript %}
@@ -31,7 +31,7 @@ var add10 = add(10);
 add10(5); //=> 15
 {% endhighlight %}
 
-Jag brukar skapa en funktion med namnet ´curry´:
+Jag brukar skapa en funktion med namnet `curry`:
 
 {% highlight javascript %}
 function add(a, b) {
