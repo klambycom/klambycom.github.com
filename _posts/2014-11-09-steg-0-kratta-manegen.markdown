@@ -2,7 +2,7 @@
 layout: post
 title:  "Steg 0 - Kratta manegen"
 date:   2014-11-09 22:59:16
-comments: false
+comments: true
 ---
 
 Jag lärde mig Javascript först i kursen Webbteknik I, innan dess hade jag bara
