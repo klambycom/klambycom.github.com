@@ -8,7 +8,7 @@ comments: true
 ## Byggprocess och dokumentation
 
 Jag har tidigare använt Grunt för enklare saker som att slå ihop filer. Gulp har
-fungerar lika bra och enda problemet jag har haft är att skapa filindex för Docco.
+fungerat lika bra och enda problemet jag har haft är att skapa filindex för Docco.
 Eftersom `gulp.task('docs', ['builddocs', 'docsindex']);` kör builddocs och
 docsindex samtidigt finns det inga filer att bygga ett index över, men man kan
 ange att en task i Gulp ska vänta på en annan task:
@@ -38,8 +38,9 @@ lägga till devDependencies och version till package.json med `npm install react
 ändra package.json manuellt.
 
 Jag hade inga problem med att köra testen, lokalt eller på Travis. Jag har inte
-läst något om hur man testar react-kod, men jag har tänkt skriva test till min kod.
-Jag brukar skriva ett par test och sen sluta för det tar för lång tid.
+läst något mer om hur man testar react-kod eller Jest, men jag har tänkt skriva
+test till min kod. Jag brukar skriva ett par test och sen sluta för det tar för
+lång tid.
 
 Jag har en gulp-task som automatiskt kopierar index, js, bygger jsx och scss
 när de filerna ändras. För att inte behöva ladda om sidan varje gång jag
