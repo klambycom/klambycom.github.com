@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Steg 3, vecka 1"
+date:   2014-11-23 19:51:16
+comments: true
+published: false
+---
+
+Tyvärr går det inte, eller jag har inte lyckats iaf, att generera dokumentation
+från jsx-filer med gulp-docco.
+
+Tyvärr stödjer inte Jest done-funktionen som finns i Jasmine.
+
+
+
+
+Jag vet inte riktigt hur det är tänkt att man ska använda react. Jag har en
+player-action/store som just nu bara sköter play och pause. Längre fram vill
+jag kanske kunna ändra volym, borde jag då lägga det i player eller skapa en
+ny. Jag tycker det hör ihop med play och pause ganska bra, men jag vill inte
+i subscriberna behöve kolla om det är play/pause eller volym som har ändrats.
