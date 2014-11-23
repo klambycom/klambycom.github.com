@@ -1,21 +1,24 @@
 ---
 layout: post
-title:  "Steg 3, vecka 1"
-date:   2014-11-23 19:51:16
+title:  "Steg 3 - Vecka 1, Reflux och Travis"
+date:   2014-11-23 22:59:16
 comments: true
-published: false
 ---
 
-Tyvärr går det inte, eller jag har inte lyckats iaf, att generera dokumentation
-från jsx-filer med gulp-docco.
+Denna veckan har det mesta gått bra, men inte testningen. Jag började skriva
+test, men fick problem med att testa funktioner med callback och slutade. Jag
+kunde inte hitta i Jests dokumentation hur man gör, så jag testade att göra som
+man gör i Jasmine och hur man gjorde innan i Jasmine, men inget fungerade.
 
-Tyvärr stödjer inte Jest done-funktionen som finns i Jasmine.
+Jag ville verkligen skriva test och kommer därför prioritera det nästa vecka. Jag
+använder inte koden längre som jag försökte testa, så jag lyckas säkert bättre
+denna gången.
 
+Jag har använt Reflux, och även om jag gillar det är jag inte helt säker på hur
+det ska användas. Jag är rädd att jag kommer få problem längre fram, eftersom
+jag bara kan lyssna på en action i React-komponenterna. Men just nu fungerar det,
+så jag oroar mig kanske i onödan.
 
-
-
-Jag vet inte riktigt hur det är tänkt att man ska använda react. Jag har en
-player-action/store som just nu bara sköter play och pause. Längre fram vill
-jag kanske kunna ändra volym, borde jag då lägga det i player eller skapa en
-ny. Jag tycker det hör ihop med play och pause ganska bra, men jag vill inte
-i subscriberna behöve kolla om det är play/pause eller volym som har ändrats.
+Jag använder Travis CI för att pusha genererad kod och dokumentation till gh-pages
+om alla test blir gröna. Jag har skrivit en separat post om hur jag gjorde det,
+[Gulp, Travis CI och gh-pages](http://klamby.com/2014/11/23/gulp-travis-gh-pages/).
