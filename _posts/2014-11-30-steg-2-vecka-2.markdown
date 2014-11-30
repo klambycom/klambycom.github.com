@@ -30,5 +30,5 @@ ner RSS-feeden, men jag tror inte att jag kommer hinna så långt nästa vecka.
 Jag måste även testa med fler RSS-feeder från olika podcaster, eftersom alla
 inte ser likadana ut.
 
-Det set ut som alla har kommit igång med sina projekt nu, så förhoppningsvis
+Det set ut som alla har kommit igång med sina applikationer nu, så förhoppningsvis
 blir det lättare att kollaborera nästa vecka.
