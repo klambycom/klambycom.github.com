@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Steg 2 - Vecka 2, routes och prenumerera"
+date:   2014-11-30 23:53:16
+comments: true
+---
+
+<img class="float-left" src="http://proxy.klamby.com/ninjapodcat.png" />
+
+Jag hade planerat att skriva tester till koden denna veckan, men fick för
+mycket problem med det, så jag struntade i det för att inte fastna och inte få
+något gjort denna veckan. Men jag ska försöka nästa vecka igen.
+
+Jag har även använt react-router denna veckan, och det har gått bra, men jag
+har inte förstått hur man redirectar. Så just nu använder jag window.location,
+men jag vet inte om det fungerar även med HTML5 history api:et, och ändrar jag
+mina routes senare måste jag även komma ihåg att ändra window.location. Det
+borde finnas ett bättre alternativ, men jag har kollat alla exempel som finns
+i react-routers repository, men inte hittat något användbart.
+
+Nu när jag använder react-router och inte har spellistan synlig hela tiden ser
+användaren inte längre när något ändras i den. Så nästa vecka måste jag komma
+på något annat sätt att ge användaren feedback när den lägger till avsnitt.
+
+Nästa vecka ska jag börja använda Firebase, som jag har tänkt använda för att
+spara podcasterna, när användare prenumererar på dem. Det hade även varit bra
+om jag kan spara avsnitt hos Firebase så att inte alla användare behöver ladda
+ner RSS-feeden, men jag tror inte att jag kommer hinna så långt nästa vecka.
+
+Jag måste även testa med fler RSS-feeder från olika podcaster, eftersom alla
+inte ser likadana ut.
+
+Det set ut som alla har kommit igång med sina projekt nu, så förhoppningsvis
+blir det lättare att kollaborera nästa vecka.
