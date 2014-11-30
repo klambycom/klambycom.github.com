@@ -12,7 +12,7 @@ mycket problem med det, så jag struntade i det för att inte fastna och inte f�
 något gjort denna veckan. Men jag ska försöka nästa vecka igen.
 
 Jag har även använt react-router denna veckan, och det har gått bra, men jag
-har inte förstått hur man redirectar. Så just nu använder jag window.location,
+har inte kommit på hur man redirectar. Så just nu använder jag window.location,
 men jag vet inte om det fungerar även med HTML5 history api:et, och ändrar jag
 mina routes senare måste jag även komma ihåg att ändra window.location. Det
 borde finnas ett bättre alternativ, men jag har kollat alla exempel som finns
