@@ -20,7 +20,7 @@ i react-routers repository, men inte hittat något användbart.
 
 Nu när jag använder react-router och inte har spellistan synlig hela tiden ser
 användaren inte längre när något ändras i den. Så nästa vecka måste jag komma
-på något annat sätt att ge användaren feedback när den lägger till avsnitt.
+på något annat sätt att ge användaren feedback när hen lägger till avsnitt.
 
 Nästa vecka ska jag börja använda Firebase, som jag har tänkt använda för att
 spara podcasterna, när användare prenumererar på dem. Det hade även varit bra
