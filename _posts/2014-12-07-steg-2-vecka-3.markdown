@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Steg 2 - Vecka 3, Firebase"
+date:   2014-12-07 23:59:16
+comments: true
+---
+
+Denna vecka har jag mest jobbat med Firebase och det har fungerar bra. Jag
+använder Firebase för att spara podcasts och avsnitt, och visar de senaste på
+förstasidan. I användarens feed visas de senaste avsnitten från användarens
+prenumerationer, som hämtas med YQL. Jag ska nog göra om det så att jag hämtar
+avsnitten från Firebase istället och bara använder YQL för att uppdatera
+databasen när det behövs.
+
+Jag har även funderar lite på hur jag ska implementera sökfunktion, om jag nu
+väljer att göra det. Tyvärr är Firebases API för att skapa sökfrågor inte så bra
+på det området. Men jag skulle kunna spara alla podcasts en gång till
+i Firebase, men bara med de fält som är viktigt för att kunna söka, minst namn
+och id. När användaren börjar söka hämtas den information och resultatet
+filtreras på klienten istället. Jag har även försökt hitta någon
+Elasticsearch-hosting som likt Firebase har en hacker plan, men har inte hittat
+någon.
+
+Jag har tidigare veckor skrivit en del css som bara fungerar i Chrome, så denna
+veckan har jag börjat använda `gulp-autoprefixer`, och jag har valt att stödja
+de två senaste versionerna av alla webbläsare. Jag såg att det även finns en
+`gulp-autopolyfiller` som jag kanske även borde använda, men just nu tror jag
+inte jag behöver någon polyfill för att stödja de två senaste versionerna.
