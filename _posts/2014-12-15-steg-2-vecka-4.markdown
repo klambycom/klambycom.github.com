@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Steg 2 - Vecka 4, Lite mer avancerad spelare"
+date:   2014-12-15 00:49:16
+comments: true
+---
+
+Denna veckan har jag arbetat mer på spelaren, den har nu en progress-bar som
+visar hur mycket som har buffrats, spelats och hur långt avsnittet är. Och nu
+spelar spelaren automatisk nästa avsnitt i spellistan.
+
+Audios och Vidoes buffered returnerar vilka delar som har buffrats i ordning efter
+start-tid och tyvärr inte efter senast buffrad del. Därför blir det fel när jag
+använder sista fältet i arrayen för att visa hur mycket som har laddats. Om jag
+klickar i slutet av avsnittet och sen i början kommer det se ut som om hela
+filen är buffrad, men egenligen är bara lite i börja och lite i slutet laddat.
+
+Progressbaren är skapad av tre div-tagar, för att visa mer korrekt information
+är antagligen den bästa lösningen att börja använda canvas istället. Men jag
+vet inte om jag ska visa vilka delar som är laddade eller bara hur mycket av
+den delen som just nu spelas. Jag måste kolla hur andra ljud/video- spelare
+fungerar.
+
+Jag har även hittat hur man ska redirecta med react-router, jag hade missat det
+i dokumentationen. Men efter att ha kollat hur det fungerar i Link-komponenten
+hittade jag det. Med funktionen transitionTo i Navigation-mixinen
+([länk](https://github.com/rackt/react-router/blob/master/docs/api/mixins/Navigation.md#transitiontoroutenameorpath-params-query)).
