@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "Steg 2 - Vecka 5, Sista implementationsveckan"
+date:   2014-12-22 13:01:16
+comments: true
+---
+
+Förra veckan och början av denna veckan har jag haft fullt upp med den andra
+kursen. Men i slutet av veckan fick jag mer tid och fick ganska mycket gjort.
+
+Nu kommer applikationen ihåg ifall ett avsnitt redan är i spellistan, och då
+går det inte att lägga till det en gång till. För att det alltid ska finnas en
+bild till avsnittet när det spelas, kollar jag om avsnittet har en bild som
+inte returnerar statuskoden 404, annars används bilden från podcasten.
+
+Nu hämtas nya avsnitt när man besöker en podcast-sida som inte har blivit
+besökt på två timmar. Jag har även ändrat så de sparas med Firebases
+push-function, istället för i en vanlig array som jag använde innan. Alla datum
+spara nu som ISO 8601 för att användas tillsammans med
+[moment.js](http://momentjs.com/). Och jag har även implementerat pagination.
+
+Även feed-sidan hämtar avsnitten från Firebase. Jag hämtar de 50 senaste
+avsnitten från alla podcasts som användaren prenumererar på, och sen sorteras
+alla avsnitt som är äldre än två månader bort.
+
+<img style="width:100%;" src="/assets/colors.png" />
+
+Jag har försökt göra podcast-sidorna lite snyggare genom att använda den
+mest förekommande färgen i bilden som backgrundsfärg. Jag får fram färgerna
+genom att lägga till bilden i en canvas och sen kolla rgba för varje pixel
+i bilden. Det fungerar oftast bra, det är bara en bild som jag inte har lyckats
+få fram alla färger från.
+
+Jag sparar alla färgerna i en array med unik position för varje färg genom att
+skapa en hash code för färgen (röd + grön + blå + (255 - alpha)). Det blir inte
+helt unik hash code, men den är tillräckligt unik.
+
+Nu när jag skriver detta funderar jag på varför jag sparar det i en array och
+inte ett object. Med ett object borde jag kunna skapa mer unika hash koder utan
+att skapa en massa tomma fält. Jag borde nog ändra det.
+
+Sen sorterar jag bort väldigt ljusa eller mörka färger, det är inte helt
+perfekt än.
