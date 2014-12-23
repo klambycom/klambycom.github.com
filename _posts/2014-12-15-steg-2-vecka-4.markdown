@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Steg 2 - Vecka 4, Lite mer avancerad spelare"
+title:  "Steg 2 - Vecka 4, lite mer avancerad spelare"
 date:   2014-12-15 00:49:16
 comments: true
 ---
