@@ -5,7 +5,7 @@ date:   2014-12-22 13:01:16
 comments: true
 ---
 
-<iframe class="float-left" width="560" height="315" src="//www.youtube.com/embed/rt3HyKocm10" frameborder="0" allowfullscreen></iframe>
+<iframe class="float-left" width="460" height="259" src="//www.youtube.com/embed/rt3HyKocm10" frameborder="0" allowfullscreen></iframe>
 
 Förra veckan och början av denna veckan har jag haft fullt upp med den andra
 kursen. Men i slutet av veckan fick jag mer tid och fick ganska mycket gjort.
