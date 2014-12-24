@@ -43,3 +43,5 @@ att skapa en massa tomma fält. Jag borde nog ändra det.
 
 Sen sorterar jag bort väldigt ljusa eller mörka färger, det är inte helt
 perfekt än.
+
+**24 dec** Nu finns drag and drop för att sortera spellistan.
