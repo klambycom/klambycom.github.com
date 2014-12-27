@@ -12,3 +12,7 @@ Kanske Web Audio API:
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
 https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
 https://developer.mozilla.org/en-US/docs/Web/API/AudioNode
+
+Libs:
+http://popcornjs.org/
+http://mediaelementjs.com/
