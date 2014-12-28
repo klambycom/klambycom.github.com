@@ -5,6 +5,8 @@ date:   2014-12-22 13:01:16
 comments: true
 ---
 
+<iframe class="float-left" width="460" height="259" src="//www.youtube.com/embed/rt3HyKocm10" frameborder="0" allowfullscreen></iframe>
+
 Förra veckan och början av denna veckan har jag haft fullt upp med den andra
 kursen. Men i slutet av veckan fick jag mer tid och fick ganska mycket gjort.
 
@@ -41,3 +43,5 @@ att skapa en massa tomma fält. Jag borde nog ändra det.
 
 Sen sorterar jag bort väldigt ljusa eller mörka färger, det är inte helt
 perfekt än.
+
+**24 dec** Nu finns drag and drop för att sortera spellistan.
