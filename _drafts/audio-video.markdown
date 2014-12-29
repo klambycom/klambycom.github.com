@@ -11,17 +11,44 @@ som audio-elementet.
 utan att behöva använda plug-in som t.ex. Flash. Både `<audio>` och `<video>`
 stödjs av alla moderna webbläsare, och ända tillbaka till Internet Explorer 9.
 
+`<audio>` och `<video>` kan ha ett src-attribut eller en eller flera
+`<source>`-elment.
+
+{% highlight html %}
+<audio src="fil.mp3" controls></audio>
+
+<audio controls>
+  <source src="fil.mp3" type="audio/mp3"></source>
+  <source src="fil.wav" type="audio/wav"></source>
+</audio>
+{% endhighlight %}
+
 
 ### Attribut
 
 `<audio>` och `<video>` har några gemensamma attribut. Dessa kan även användas
-i JS API:et som ...
+i JS API:et som egenskaper.
+
+{% highlight html %}
+<audio src="fil.mp3" autoplay></audio>
+{% endhighlight %}
+
+är samma som:
+
+{% highlight javascript %}
+var audio = new Audio();
+audio.autoplay = true;
+audio.src = "fil.mp3";
+audio.load(); // NEEDED???????
+{% endhighlight %}
 
 
 #### src
 
 Address till filen som ska spelas. Behövs inte anges, utan man kan istället
 använda `<source>` innanför `<audio>` eller `<video>`.
+
+TODO Visa exempel!
 
 
 #### crossorigin
@@ -56,17 +83,82 @@ använder `auto`.
 
 #### autoplay
 
+`autoplay` är ett boolean attribut som används för att bestämma om spelaren
+automatiskt ska börja spela.
+
+{% highlight html %}
+<!-- Spela automatiskt -->
+<audio src="fil.mp3" autoplay></audio>
+<audio src="fil.mp3" autoplay=autoplay></audio>
+<audio src="fil.mp3" autoplay=""></audio>
+
+<!-- Spela INTE automatiskt -->
+<audio src="fil.mp3"></audio>
+{% endhighlight %}
+
 
 #### mediagroup
+
+`mediagroup` används för att gruppera flera `<audio>` och `<video>` för att
+kunna styra med en gemensam MediaController.
+
+{% highlight javascript %}
+var a1 = new Audio('http://traffic.libsyn.com/kodsnack/James_Mickens.mp3');
+var a2 = new Audio('http://traffic.libsyn.com/kodsnack/7_december.mp3');
+a1.mediaGroup = 'group1';
+a2.mediaGroup = 'group1';
+a1.controller.play();
+{% endhighlight %}
+
+Men tyvärr stödjer ingen webbläsare MediaController.
 
 
 #### loop
 
+Boolean attributet `loop` startar om videon eller ljudet när det har spelats.
+
 
 #### muted
 
+Boolean attributet `muted` stänger av ljudet för vidoen eller ljudet.
+
 
 #### controls
+
+Om videon eller ljudet har boolean attributet `loop` kommer webbläsarens egna
+controller visas. Det ser lite olika ut i olika webbläsare.
+
+TODO Visa hur det ser ut i olika webbläsare.
+
+
+### &lt;video&gt;-specifika attribut
+
+`<video>` har ett par egna attribut.
+
+
+#### poster
+
+Bild som vissas innan videon är nerladdad och tillgänglig.
+
+
+#### width och height
+
+Används för att ändra storleket på videon.
+
+
+### Egenskaper
+
+Alla attribut går att använda som egenskaper i API:et, men det finns även
+egenskaper som bara går att komma åt med API:et.
+
+
+### Metoder
+
+
+### Events
+
+
+### OpenVTT
 
 
 ## Källor
@@ -74,6 +166,7 @@ använder `auto`.
 * [http://caniuse.com/#feat=video](http://caniuse.com/#feat=video)
 * [http://caniuse.com/#feat=audio](http://caniuse.com/#feat=audio)
 * [http://www.w3.org/TR/html5/embedded-content-0.html](http://www.w3.org/TR/html5/embedded-content-0.html)
+* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 
 
 
@@ -95,3 +188,4 @@ använder `auto`.
 ## Libs:
 * http://popcornjs.org/
 * http://mediaelementjs.com/
+* http://www.jplayer.org/
