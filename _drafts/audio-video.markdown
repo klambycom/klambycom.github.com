@@ -1,11 +1,16 @@
-# Spela ljud i webbläsaren
+---
+layout: post
+title:  "Spela ljud i webbläsaren"
+date:   2014-12-31 23:59:59
+comments: false
+---
 
 Jag kommer i detta inlägget skriva om audio-elementet som finns i HTML5. Jag
 kommer även skriva lite om video-elementet eftersom det fungerar väldigt mycket
 som audio-elementet.
 
 
-## &lt;audio&gt; och &lt;video&gt;
+# &lt;audio&gt; och &lt;video&gt;
 
 `<audio>` och `<video>` används för att spela ljud och video i webbläsaren,
 utan att behöva använda plug-in som t.ex. Flash. Både `<audio>` och `<video>`
@@ -24,7 +29,7 @@ stödjs av alla moderna webbläsare, och ända tillbaka till Internet Explorer 9
 {% endhighlight %}
 
 
-### Attribut
+## Attribut
 
 `<audio>` och `<video>` har några gemensamma attribut. Dessa kan även användas
 i JS API:et som egenskaper.
@@ -43,7 +48,7 @@ audio.load(); // NEEDED???????
 {% endhighlight %}
 
 
-#### src
+### src
 
 Address till filen som ska spelas. Behövs inte anges, utan man kan istället
 använda `<source>` innanför `<audio>` eller `<video>`.
@@ -51,7 +56,7 @@ använda `<source>` innanför `<audio>` eller `<video>`.
 TODO Visa exempel!
 
 
-#### crossorigin
+### crossorigin
 
 Kan vara "anonymous" för att ..., "use-credentials" för att ... och om inget
 anges är default-läget "No CORS".
@@ -59,7 +64,7 @@ anges är default-läget "No CORS".
 Läs mer på http://www.w3.org/TR/html5/infrastructure.html#cors-settings-attribute.
 
 
-#### preload
+### preload
 
 `preload` används för att bestämma hur mycket som ska laddas ner innan
 användaren börjar spela videon/ljudet, och även hur filen ska laddas ner.
@@ -81,7 +86,7 @@ i specifikationen. Chrome och Safari följer specifikationen, men Firefox
 använder `auto`.
 
 
-#### autoplay
+### autoplay
 
 `autoplay` är ett boolean attribut som används för att bestämma om spelaren
 automatiskt ska börja spela.
@@ -97,7 +102,7 @@ automatiskt ska börja spela.
 {% endhighlight %}
 
 
-#### mediagroup
+### mediagroup
 
 `mediagroup` används för att gruppera flera `<audio>` och `<video>` för att
 kunna styra med en gemensam MediaController.
@@ -113,17 +118,17 @@ a1.controller.play();
 Men tyvärr stödjer ingen webbläsare MediaController.
 
 
-#### loop
+### loop
 
 Boolean attributet `loop` startar om videon eller ljudet när det har spelats.
 
 
-#### muted
+### muted
 
 Boolean attributet `muted` stänger av ljudet för vidoen eller ljudet.
 
 
-#### controls
+### controls
 
 Om videon eller ljudet har boolean attributet `loop` kommer webbläsarens egna
 controller visas. Det ser lite olika ut i olika webbläsare.
@@ -131,45 +136,39 @@ controller visas. Det ser lite olika ut i olika webbläsare.
 TODO Visa hur det ser ut i olika webbläsare.
 
 
-### &lt;video&gt;-specifika attribut
+## &lt;video&gt;-specifika attribut
 
 `<video>` har ett par egna attribut.
 
+**poster** — Bild som vissas innan videon är nerladdad och tillgänglig.
 
-#### poster
-
-Bild som vissas innan videon är nerladdad och tillgänglig.
-
-
-#### width och height
-
-Används för att ändra storleket på videon.
+**width och height** — Används för att ändra storleket på videon.
 
 
-### Egenskaper
+## Egenskaper
 
 Alla attribut går att använda som egenskaper i API:et, men det finns även
 egenskaper som bara går att komma åt med API:et. Mycket är inte implementerat
 i webbläsarna än, med dessa är de jag tycker är ANVÄNDBARAST.
 
 
-#### buffered
+### buffered
 
 
-#### currentTime
+### currentTime
 
 `currentTime` reprensenterar nuvarande position i sekunder. Kan även användas
 för att ändra position.
 
 
-#### duration
+### duration
 
 `duration` reprensenterar längden på videon eller ljudklippet. Om det inte
 finns någon video eller ljud är `duration` NaN, och om det streamas är värdet
 Inf (infinity).
 
 
-#### networkState
+### networkState
 
 `networkState` reprensenterar `<audio>`/`<video>` nuvarande tillstånd.
 
@@ -179,14 +178,14 @@ Inf (infinity).
 * 3 = NETWORK_NO_SOURCE
 
 
-#### playbackRate
+### playbackRate
 
 `playbackRate` reprensenterar uppspelningshastigheten och kan även användas för
 att ändra hastigheten. Kan även vara ett negativt värde för att spela
 baklänges.
 
 
-#### readyState
+### readyState
 
 `readyState` reprensenterar hur mycket av filen som har laddats ner.
 
@@ -197,16 +196,115 @@ baklänges.
 * 4 = HAVE_ENOUGH_DATA
 
 
-### Metoder
+### volume
+
+`volume` reprensenterar volymen, och är ett värde mellan 0.0 och 1.0. Kan även
+användas för att ändra volymen.
 
 
-### Events
+### buffered, played och seekable
+
+`buffered` reprensenterar vilka delar av filen som har laddats, `played` vilka
+delar av filen som har spelats av användaren och `seekable` vilka delar av filen
+som är tillgängliga (oftast hela filen om den inte streamas). `buffered`, `played`
+och `seekable` returnerar alla tre ett `TimeRanges`-objekt.
+
+`TimeRanges` är ett objekt som har en egenskap och två funktioner:
+
+* `length` är antalet tids-intervall.
+* `start(index)` är hur många sekunder in i filen intervallet börjar.
+* `end(index)` är hur många sekunder in i filen intervallet slutar.
+
+Intervallen sorteras efter tid, och intervallet överlappas aldrig och börjar
+aldrig där ett annat intervall slutar, intervallet slås istället ihop till ett
+enda intervall.
 
 
-### OpenVTT
+## Metoder
+
+`<audio>` och `<video>` har bara ett fåtal metoder och de är ganska
+självförklarande, `play()`, `pause()` och `load()` (laddar om filen).
+Metoden `canPlayType()` kontrollerar om webbläsaren har stöd för en viss
+video-/ljus-format.
+
+{% highlight javascript %}
+var audio = new Audio();
+audio.canPlayType('audio/mpeg';codecs="mp3"');
+{% endhighlight %}
+
+`canPlayType()` returnerar en tom sträng om webbläsaren inte kan spela formatet,
+"probably" om webbläsaren vet att den kan spela formatet, annars returneras
+"maybe".
 
 
-## Källor
+## Events
+
+`abort` när webbläsaren avbryter hämtandet av filen innan den är helt
+nerladdad, men inte pga error. Då är det istället `error`-eventet eller
+`stalled` när webbläsaren försöker hämta filen, men inte lyckas.
+
+`canplay` när webbläsaren kan börja spela videon/ljudet och `canplaythrough`
+när webbläsaren kan spela utan att behöva stanna för att buffra. När
+webbläsaren behöver vänta på att filen buffras används eventet `waiting` och 
+`playing` när filen börjar spelas igen (och även när filen börjar spelas igen
+efter att ha varit pausad).
+
+`ended` när videon eller ljudet är slut.
+
+TODO Visa kodexempel där nästa avsnitt spelas när ended-eventet händer.
+
+`loadstart` när webbläsaren börjar ladda ner fil, `loadedmetadata` när metadata
+är nerladdat och slutligen `loadeddata` när nuvarande del av filen är nerladdad.
+
+`progress` när webbläsaren laddar ner filen.
+
+TODO Visa kodexempel där antalet nerladdat procent räknas ut.
+
+`seeking` när användaren ändrar position i videon eller ljudet, och `seeked`
+när användaren är färdig med att ändra position.
+
+`timeupdate` när nuvarande position i videon eller ljudet ändras.
+
+TODO Visa kodexempel med hur lång tid som har spelats.
+
+Andra event är `play`, `pause`, `durationchange`, `ratechange` (hastighet),
+`volumechange` och `suspend` när webbläsaren har slutat hämta filen.
+
+
+# &lt;track&gt;
+
+`<track>` används för att lägga till text till `<audio>` och `<video>` på
+angivna ställen. Elementet har attributen:
+
+* `kind` anger vilken typ av text-track.
+  * "subtitles" — Transkription eller översättning av dialog.
+  * "captions" — Transkription eller översättning av dialog, ljudeffekter och
+    andra relevanta ljud. Användbart för när det är svårt att höra ljudet.
+  * "descriptions"
+  * "chapters"
+  * "metadata" — Visas inte av webbläsaren.
+* `src`
+* `srclang` är textens språk.
+* `label` är titel som används när webbläsaren listar tracks.
+* `default` är ett boolean attribute.
+
+{% highlight html %}
+<video src="film.mp4">
+  <track kind="subtitles" src="film.en.vtt" label="EN">
+  <track kind="subtitles" src="film.sv.vtt" label="SV">
+</video>
+{% endhighlight %}
+
+
+## WebVTT
+
+WebVTT är ett format för att skapa tidsinställda textspår som fungerar
+tillsammans med `<track>`. En WebVTT-fil måset vara UTF-8.
+
+
+# Källor
+
+## `<audio>` och `<video>`
 
 * [http://caniuse.com/#feat=video](http://caniuse.com/#feat=video)
 * [http://caniuse.com/#feat=audio](http://caniuse.com/#feat=audio)
@@ -215,9 +313,14 @@ baklänges.
 * [http://www.w3schools.com/tags/ref_av_dom.asp](http://www.w3schools.com/tags/ref_av_dom.asp)
 
 
+## `<track>`
+
+* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
+* [https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format)
+
+
 
 ## Some useful links:
-* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 
 * http://www.html5rocks.com/en/tutorials/track/basics/
