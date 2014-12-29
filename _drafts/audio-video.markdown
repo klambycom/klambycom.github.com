@@ -149,7 +149,52 @@ Används för att ändra storleket på videon.
 ### Egenskaper
 
 Alla attribut går att använda som egenskaper i API:et, men det finns även
-egenskaper som bara går att komma åt med API:et.
+egenskaper som bara går att komma åt med API:et. Mycket är inte implementerat
+i webbläsarna än, med dessa är de jag tycker är ANVÄNDBARAST.
+
+
+#### buffered
+
+
+#### currentTime
+
+`currentTime` reprensenterar nuvarande position i sekunder. Kan även användas
+för att ändra position.
+
+
+#### duration
+
+`duration` reprensenterar längden på videon eller ljudklippet. Om det inte
+finns någon video eller ljud är `duration` NaN, och om det streamas är värdet
+Inf (infinity).
+
+
+#### networkState
+
+`networkState` reprensenterar `<audio>`/`<video>` nuvarande tillstånd.
+
+* 0 = NETWORK_EMPTY
+* 1 = NETWORK_IDLE
+* 2 = NETWORK_LOADING
+* 3 = NETWORK_NO_SOURCE
+
+
+#### playbackRate
+
+`playbackRate` reprensenterar uppspelningshastigheten och kan även användas för
+att ändra hastigheten. Kan även vara ett negativt värde för att spela
+baklänges.
+
+
+#### readyState
+
+`readyState` reprensenterar hur mycket av filen som har laddats ner.
+
+* 0 = HAVE_NOTHING
+* 1 = HAVE_METADATA
+* 2 = HAVE_CURRENT_DATA
+* 3 = HAVE_FUTURE_DATA
+* 4 = HAVE_ENOUGH_DATA
 
 
 ### Metoder
@@ -167,12 +212,12 @@ egenskaper som bara går att komma åt med API:et.
 * [http://caniuse.com/#feat=audio](http://caniuse.com/#feat=audio)
 * [http://www.w3.org/TR/html5/embedded-content-0.html](http://www.w3.org/TR/html5/embedded-content-0.html)
 * [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+* [http://www.w3schools.com/tags/ref_av_dom.asp](http://www.w3schools.com/tags/ref_av_dom.asp)
 
 
 
 ## Some useful links:
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
-* http://www.w3schools.com/tags/ref_av_dom.asp
 * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 
 * http://www.html5rocks.com/en/tutorials/track/basics/
