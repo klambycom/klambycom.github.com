@@ -44,16 +44,43 @@ i JS API:et som egenskaper.
 var audio = new Audio();
 audio.autoplay = true;
 audio.src = "fil.mp3";
-audio.load(); // NEEDED???????
+audio.load();
 {% endhighlight %}
 
 
 ### src
 
 Address till filen som ska spelas. Behövs inte anges, utan man kan istället
-använda `<source>` innanför `<audio>` eller `<video>`.
+använda `<source>` innanför `<audio>` eller `<video>`. Det går att ange vilka
+delar som ska spelas med hjälp av Media Fragments URI.
 
-TODO Visa exempel!
+{% highlight html %}
+<!-- Spela filen fil.mp3 -->
+<audio src="fil.mp3"></audio>
+
+<!-- Spela 10 sekunder från 20 sekunder in i filen -->
+<audio src="fil.mp3#t=20,30"></audio>
+
+<!-- Spela de första 30 minuterna -->
+<audio src="fil.mp3#t=,00:30:00"></audio>
+
+<!-- Börja spela en timme in i filen -->
+<audio src="fil.mp3#t=01:00:00"></audio>
+{% endhighlight %}
+
+TODO Testa webbläsarsupport!
+
+Det går att ange flera `<source>`, och då kommer webbläsaren välja den första
+som den klarar av att spelar. Om webbläsaren inte kan spela någon av dem kommer
+det som inte är `<source>` eller `<track>` visas.
+
+{% highlight html %}
+<audio controls>
+  <source src="fil.mp3" type="video/mpeg">
+  <source src="fil.wav" type="video/wav">
+  <p>Din webbläsare kan inte spela filen.</p>
+</audio>
+{% endhighlight %}
 
 
 ### crossorigin
@@ -332,6 +359,8 @@ Och även [HTML5Rocks](http://www.html5rocks.com/en/tutorials/track/basics/).
 * [http://www.w3.org/TR/html5/embedded-content-0.html](http://www.w3.org/TR/html5/embedded-content-0.html)
 * [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 * [http://www.w3schools.com/tags/ref_av_dom.asp](http://www.w3schools.com/tags/ref_av_dom.asp)
+* [http://www.w3.org/TR/media-frags/](http://www.w3.org/TR/media-frags/)
+* []()
 
 
 ## `<track>`
