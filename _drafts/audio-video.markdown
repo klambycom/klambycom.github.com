@@ -23,7 +23,7 @@ stödjs av alla moderna webbläsare, och ända tillbaka till Internet Explorer 9
 <audio src="fil.mp3" controls></audio>
 
 <audio controls>
-  <source src="fil.mp3" type="audio/mp3"></source>
+  <source src="fil.mp3" type="audio/mpeg"></source>
   <source src="fil.wav" type="audio/wav"></source>
 </audio>
 {% endhighlight %}
@@ -301,6 +301,27 @@ angivna ställen. Elementet har attributen:
 WebVTT är ett format för att skapa tidsinställda textspår som fungerar
 tillsammans med `<track>`. En WebVTT-fil måset vara UTF-8.
 
+{% highlight text %}
+WEBVTT
+
+  1
+  00:02:32.893 --> 00:02:36.328
+  Fel, gör det igen!
+
+  2
+  00:02:37.123 --> 00:02:42.324
+  Om du inte äter ditt kött, kan du inte ha någon pudding.
+  Hur kan du ha någon pudding om du inte äter ditt kött?
+
+  3
+  00:02:42.343 --> 00:02:44.738
+  Du! Ja, du bakom cyckelskjulet, stå stilla kompis!
+{% endhighlight %}
+
+Det finns mycket mer man kan göra. Mozilla Developer Network har mer
+[information](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format).
+Och även [HTML5Rocks](http://www.html5rocks.com/en/tutorials/track/basics/).
+
 
 # Källor
 
@@ -322,8 +343,6 @@ tillsammans med `<track>`. En WebVTT-fil måset vara UTF-8.
 
 ## Some useful links:
 * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
-
-* http://www.html5rocks.com/en/tutorials/track/basics/
 
 * http://updates.html5rocks.com/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
 * https://developer.mozilla.org/en-US/docs/Creating_a_simple_synth
