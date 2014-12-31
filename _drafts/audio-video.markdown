@@ -6,18 +6,23 @@ comments: false
 ---
 
 Jag kommer i detta inlägget skriva om audio-elementet som finns i HTML5. Jag
-kommer även skriva lite om video-elementet eftersom det fungerar väldigt mycket
-som audio-elementet.
+kommer även skriva lite om video-elementet eftersom de är så väldigt lika
+varandra.
 
 
 # &lt;audio&gt; och &lt;video&gt;
 
 `<audio>` och `<video>` används för att spela ljud och video i webbläsaren,
-utan att behöva använda plug-in som t.ex. Flash. Både `<audio>` och `<video>`
-stödjs av alla moderna webbläsare, och ända tillbaka till Internet Explorer 9.
+utan att behöva använda plug-in som t.ex. Flash, och är en del av
+[HTML5 Embedded content](http://www.w3.org/TR/html5/embedded-content-0.html).
+Både `<audio>` och `<video>` stödjs av alla moderna webbläsare, och ända
+tillbaka till Internet Explorer 9.
+
+* [Caniuse &lt;video&gt;](http://caniuse.com/#feat=video)
+* [Caniuse &lt;audio&gt;](http://caniuse.com/#feat=audio)
 
 `<audio>` och `<video>` kan ha ett src-attribut eller en eller flera
-`<source>`-elment.
+`<source>`-element.
 
 {% highlight html %}
 <audio src="fil.mp3" controls></audio>
@@ -52,7 +57,8 @@ audio.load();
 
 Address till filen som ska spelas. Behövs inte anges, utan man kan istället
 använda `<source>` innanför `<audio>` eller `<video>`. Det går att ange vilka
-delar som ska spelas med hjälp av Media Fragments URI.
+delar som ska spelas med hjälp av
+[Media Fragments URI](http://www.w3.org/TR/media-frags/).
 
 {% highlight html %}
 <!-- Spela filen fil.mp3 -->
@@ -67,8 +73,6 @@ delar som ska spelas med hjälp av Media Fragments URI.
 <!-- Börja spela en timme in i filen -->
 <audio src="fil.mp3#t=01:00:00"></audio>
 {% endhighlight %}
-
-TODO Testa webbläsarsupport!
 
 Det går att ange flera `<source>`, och då kommer webbläsaren välja den första
 som den klarar av att spelar. Om webbläsaren inte kan spela någon av dem kommer
@@ -85,10 +89,9 @@ det som inte är `<source>` eller `<track>` visas.
 
 ### crossorigin
 
-Kan vara "anonymous" för att ..., "use-credentials" för att ... och om inget
-anges är default-läget "No CORS".
-
-Läs mer på http://www.w3.org/TR/html5/infrastructure.html#cors-settings-attribute.
+Kan vara "anonymous" eller "use-credentials" och om inget anges är default-läget
+"No CORS". Läs mer hos
+[W3C](http://www.w3.org/TR/html5/infrastructure.html#cors-settings-attribute).
 
 
 ### preload
@@ -98,10 +101,10 @@ användaren börjar spela videon/ljudet, och även hur filen ska laddas ner.
 
 Giltiga värden för `preload` är:
 
-* `none` betyder att inget ska laddas ner förren användaren har klickat på
+* `none` betyder att inget ska laddas ner innan användaren har klickat på
   play. Den bestämmer inte hur filen ska laddas ner när användaren har klickat
   på play.
-* `metadata` betyder att metadata ska laddas ner, t.ex. längd. Oftast betyder
+* `metadata` betyder att metadata ska laddas ner, bl.a. längd. Oftast betyder
   det även att början av filen ska laddas ner. När användaren har klickat på
   play kommer filen laddas ner så långsamt som möjligt utan att behöva pausa
   för att buffra, för att spara bandbredd.
@@ -109,7 +112,7 @@ Giltiga värden för `preload` är:
   att användaren ska behöva klicka på play.
 
 Tom sträng är samma som `auto`, men om `preload` saknas rekomenderas `metadata`
-i specifikationen. Chrome och Safari följer specifikationen, men Firefox
+i specifikationen. Chrome och Safari följer rekommendationen, men Firefox
 använder `auto`.
 
 
@@ -129,22 +132,6 @@ automatiskt ska börja spela.
 {% endhighlight %}
 
 
-### mediagroup
-
-`mediagroup` används för att gruppera flera `<audio>` och `<video>` för att
-kunna styra med en gemensam MediaController.
-
-{% highlight javascript %}
-var a1 = new Audio('http://traffic.libsyn.com/kodsnack/James_Mickens.mp3');
-var a2 = new Audio('http://traffic.libsyn.com/kodsnack/7_december.mp3');
-a1.mediaGroup = 'group1';
-a2.mediaGroup = 'group1';
-a1.controller.play();
-{% endhighlight %}
-
-Men tyvärr stödjer ingen webbläsare MediaController.
-
-
 ### loop
 
 Boolean attributet `loop` startar om videon eller ljudet när det har spelats.
@@ -160,7 +147,7 @@ Boolean attributet `muted` stänger av ljudet för vidoen eller ljudet.
 Om videon eller ljudet har boolean attributet `loop` kommer webbläsarens egna
 controller visas. Det ser lite olika ut i olika webbläsare.
 
-TODO Visa hur det ser ut i olika webbläsare.
+<p style="text-align:center;"><img src="/assets/images/audio.png" /></p>
 
 
 ## &lt;video&gt;-specifika attribut
@@ -176,10 +163,7 @@ TODO Visa hur det ser ut i olika webbläsare.
 
 Alla attribut går att använda som egenskaper i API:et, men det finns även
 egenskaper som bara går att komma åt med API:et. Mycket är inte implementerat
-i webbläsarna än, med dessa är de jag tycker är ANVÄNDBARAST.
-
-
-### buffered
+i webbläsarna än, med dessa är de jag tycker är viktigast.
 
 
 ### currentTime
@@ -251,12 +235,12 @@ enda intervall.
 
 `<audio>` och `<video>` har bara ett fåtal metoder och de är ganska
 självförklarande, `play()`, `pause()` och `load()` (laddar om filen).
-Metoden `canPlayType()` kontrollerar om webbläsaren har stöd för en viss
-video-/ljus-format.
+Metoden `canPlayType()` kontrollerar om webbläsaren har stöd för ett visst
+video-/ljud-format.
 
 {% highlight javascript %}
 var audio = new Audio();
-audio.canPlayType('audio/mpeg';codecs="mp3"');
+audio.canPlayType('audio/mpeg;codecs="mp3"');
 {% endhighlight %}
 
 `canPlayType()` returnerar en tom sträng om webbläsaren inte kan spela formatet,
@@ -278,21 +262,60 @@ efter att ha varit pausad).
 
 `ended` när videon eller ljudet är slut.
 
-TODO Visa kodexempel där nästa avsnitt spelas när ended-eventet händer.
+{% highlight javascript %}
+var mp3s = [
+  'http://sverigesradio.se/topsy/ljudfil/5182870.mp3',
+  'http://sverigesradio.se/topsy/ljudfil/5180916.mp3',
+  'http://sverigesradio.se/topsy/ljudfil/2103136.mp3',
+  'http://sverigesradio.se/topsy/ljudfil/1642156.mp3',
+  'http://sverigesradio.se/topsy/ljudfil/5149820.mp3'
+];
+
+var audio = new Audio();
+audio.addEventListener('ended', function () {
+  audio.src = mp3s.pop();
+  audio.play();
+});
+{% endhighlight %}
 
 `loadstart` när webbläsaren börjar ladda ner fil, `loadedmetadata` när metadata
 är nerladdat och slutligen `loadeddata` när nuvarande del av filen är nerladdad.
 
 `progress` när webbläsaren laddar ner filen.
 
-TODO Visa kodexempel där antalet nerladdat procent räknas ut.
+{% highlight javascript %}
+var audio = new Audio('http://...');
+audio.addEventListener('progress', function () {
+  var buffered = audio.buffered.end(audio.buffered.length - 1);
+  console.log("Buffered: " + (buffered / audio.duration * 100) + "%");
+});
+{% endhighlight %}
 
 `seeking` när användaren ändrar position i videon eller ljudet, och `seeked`
 när användaren är färdig med att ändra position.
 
 `timeupdate` när nuvarande position i videon eller ljudet ändras.
 
-TODO Visa kodexempel med hur lång tid som har spelats.
+{% highlight javascript %}
+var secsToStr = function (time) {
+  if (isNaN(time)) { return '00:00'; }
+  var hour = '';
+  var min = Math.round(time / 60);
+  var sec = Math.round(time % 60);
+
+  if (min > 59) {
+    hour = Math.round(min / 60) + ':';
+    min = Math.round(min % 60);
+  }
+
+  return hour + (min < 10 ? '0' + min : min) + ':' + (sec < 10 ? '0' + sec : sec);
+};
+
+var audio = new Audio('http://...');
+audio.addEventListener('timeupdate', function () {
+  console.log("Current time: " + secsToStr(audio.currentTime));
+});
+{% endhighlight %}
 
 Andra event är `play`, `pause`, `durationchange`, `ratechange` (hastighet),
 `volumechange` och `suspend` när webbläsaren har slutat hämta filen.
@@ -300,8 +323,9 @@ Andra event är `play`, `pause`, `durationchange`, `ratechange` (hastighet),
 
 # &lt;track&gt;
 
-`<track>` används för att lägga till text till `<audio>` och `<video>` på
-angivna ställen. Elementet har attributen:
+[`<track>`](http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-track-element)
+används för att lägga till text till `<audio>` och `<video>` på angivna
+ställen. Elementet har attributen:
 
 * `kind` anger vilken typ av text-track.
   * "subtitles" — Transkription eller översättning av dialog.
@@ -354,12 +378,13 @@ Och även [HTML5Rocks](http://www.html5rocks.com/en/tutorials/track/basics/).
 
 Om du ska spela flera eller samma ljud samtidigt som du vill spela vid en exakt
 tidpunkt, som i ett spel, fungerar `<audio>` inte lika bra, du kan istället
-använda Web Audio API. Web Audio API låter dig även använda effekter, generera,
-manipulera och analysera ljud.
+använda [Web Audio API](http://webaudio.github.io/web-audio-api/). Web Audio API
+låter dig även använda effekter, generera, manipulera och analysera ljud.
 
 Jag har tyvärr inte använt Web Audio API i min applikation, men jag tänkte
 visa ett par exempel på vad man kan göra med det. Jag kommer inte gå igenom det
-lika noga som jag gjorde med Audio-elementet.
+lika noga som jag gjorde med Audio-elementet. Jag rekommenderar att du läser HTML5Rocks
+[introduktion till Web Audio API](http://www.html5rocks.com/en/tutorials/webaudio/intro/).
 
 
 ## Spela ljud
@@ -386,20 +411,44 @@ var playSound = function (buffer) {
   source.buffer = buffer;
   source.connect(context.destination);
   source.start(0);
-}
-
-var btn = document.createElement('button');
-btn.appendChild(document.createTextNode('Play sound'));
-btn.addEventListener('click', function () {
-  loadSound('', function (buffer) {
-    playSound(buffer);
-  });
-});
-document.body.appendChild(btn);
+};
 {% endhighlight %}
 
+[Demo](/demo/web_audio_api_play_sound/)
+
+`decodeAudioData` avkodar ljuddatan i ArrayBuffer:en, och returnerar ett
+Promise-objekt, men det går även att använda en success- och error-callback.
+`createBufferSource` skapar en `AudioBufferSourceNode` och sen tilldelas den
+buffer som ska spelas. AudioNode:en måste kopplas samman med en annan
+AudioNode, i detta fallet `AudioDestinationNode` (högtalaren). Till sist spelar
+ljudet från början.
 
 ## Generera ljud
+
+Det går även att generera en buffer från kod och använda i en Node.
+
+{% highlight javascript %}
+var context = new AudioContext();
+
+var whiteNoise = function () {
+  var length = 2 * context.sampleRate;
+  var buffer = context.createBuffer(1, length, context.sampleRate);
+  var bufferData = buffer.getChannelData(0);
+
+  for (var i = 0; i < length; i += 1) {
+    bufferData[i] = (2 * Math.random() - 1);
+  }
+
+  return buffer;
+};
+{% endhighlight %}
+
+[Demo](/demo/white_noise/)
+
+`sampleRate` är antalet frames (?) per sekund, och därför är två ggr det
+värdet två sekunder. Alla noder i samma context har samma hastighet. Sen skapas
+en buffer och dess data hämtas med `getChannelData()` som
+[PCM](http://en.wikipedia.org/wiki/Pulse-code_modulation) i en array.
 
 
 ## Manipulera ljud
@@ -407,24 +456,23 @@ document.body.appendChild(btn);
 
 ## Analysera ljud
 
+{% highlight javascript %}
+var context = new AudioContext();
 
-# Källor
+var audio = new Audio('http://...');
+var source = context.createMediaElementSource(audio);
 
-## `<audio>` och `<video>`
+var analyser = context.createAnalyser();
 
-* [http://caniuse.com/#feat=video](http://caniuse.com/#feat=video)
-* [http://caniuse.com/#feat=audio](http://caniuse.com/#feat=audio)
-* [http://www.w3.org/TR/html5/embedded-content-0.html](http://www.w3.org/TR/html5/embedded-content-0.html)
-* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
-* [http://www.w3schools.com/tags/ref_av_dom.asp](http://www.w3schools.com/tags/ref_av_dom.asp)
-* [http://www.w3.org/TR/media-frags/](http://www.w3.org/TR/media-frags/)
-* []()
+source.connect(analyser);
+analyser.connect(context.destination);
+{% endhighlight %}
+
+I exemplet ovan skapas en
+[`AnalyserNode`](http://webaudio.github.io/web-audio-api/#the-analysernode-interface) 
+mellan ljudet och högtalarna.
 
 
-## `<track>`
-
-* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
-* [https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format)
 
 
 
