@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Audio API, White Noise</title>
+    <style>
+      .bar {
+        float: left;
+        height: 400px;
+        margin-right: 2px;
+      }
+
+      .bar-data {
+        width: 10px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="player" src="http://sverigesradio.se/topsy/ljudfil/5182870.mp3" controls></audio>
+    <div id="visualisation">
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+      <div class="bar"><div class="bar-data"></div></div>
+    </div>
+
+    <script>
+      var context = new AudioContext();
+
+      var analyser = context.createAnalyser();
+      analyser.fftSize = 64;
+      var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+      var bars = document.querySelectorAll('.bar-data');
+
+      function update() {
+        requestAnimationFrame(update);
+        analyser.getByteFrequencyData(frequencyData);
+
+        [].forEach.call(bars, function (x, i) {
+          x.style.height = frequencyData[i] + 'px';
+        });
+      }
+
+      document.querySelector('#player').addEventListener('canplay', function () {
+        var source = context.createMediaElementSource(this);
+        source.connect(analyser);
+        analyser.connect(context.destination);
+      });
+
+      update();
+    </script>
+  </body>
+</html>
