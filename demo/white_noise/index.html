@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Audio API, White Noise</title>
+  </head>
+  <body>
+    <script>
+      var context = new AudioContext();
+
+      var whiteNoise = function () {
+        var length = 2 * context.sampleRate;
+        var buffer = context.createBuffer(1, length, context.sampleRate);
+        var bufferData = buffer.getChannelData(0);
+
+        for (var i = 0; i < length; i += 1) {
+          bufferData[i] = (2 * Math.random() - 1);
+        }
+
+        return buffer;
+      };
+
+      var playSound = function (buffer) {
+        var source = context.createBufferSource();
+        source.buffer = buffer;
+        source.connect(context.destination);
+        source.start(0);
+      };
+
+      var btn = document.createElement('button');
+      btn.appendChild(document.createTextNode('Play noise'));
+      btn.addEventListener('click', function () {
+        playSound(whiteNoise());
+      });
+      document.body.appendChild(btn);
+    </script>
+  </body>
+</html>
