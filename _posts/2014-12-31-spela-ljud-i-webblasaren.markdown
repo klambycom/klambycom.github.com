@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spela ljud i webbläsaren"
+title:  "Spela ljud (och video) i webbläsaren"
 date:   2014-12-31 17:19:59
 comments: true
 ---
