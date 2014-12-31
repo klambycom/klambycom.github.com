@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Audio API, Play Sound</title>
+  </head>
+  <body>
+    <script>
+      var context = new AudioContext();
+
+      var soundCache = {};
+      var loadSound = function (callback, url) {
+        if (soundCache[url]) {
+          callback(soundCache[url]);
+        } else {
+          var request = new XMLHttpRequest();
+          request.open('GET', url, true);
+          request.responseType = 'arraybuffer';
+          request.addEventListener('load', function () {
+            context.decodeAudioData(request.response, function (buffer) {
+              soundCache[url] = buffer;
+              callback(buffer);
+            });
+          });
+          request.send();
+        }
+      };
+
+      var playSound = function (buffer) {
+        var source = context.createBufferSource();
+        source.buffer = buffer;
+        source.connect(context.destination);
+        source.start(0);
+      }
+
+      var loadAndPlay = loadSound.bind(null, playSound);
+
+      var btn = document.createElement('button');
+      btn.appendChild(document.createTextNode('Play sound'));
+      btn.addEventListener('click', loadAndPlay.bind(null, '/assets/sounds/alien_phaser.wav'));
+      document.body.appendChild(btn);
+    </script>
+  </body>
+</html>
