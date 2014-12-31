@@ -352,6 +352,61 @@ Och även [HTML5Rocks](http://www.html5rocks.com/en/tutorials/track/basics/).
 
 # Web Audio API
 
+Om du ska spela flera eller samma ljud samtidigt som du vill spela vid en exakt
+tidpunkt, som i ett spel, fungerar `<audio>` inte lika bra, du kan istället
+använda Web Audio API. Web Audio API låter dig även använda effekter, generera,
+manipulera och analysera ljud.
+
+Jag har tyvärr inte använt Web Audio API i min applikation, men jag tänkte
+visa ett par exempel på vad man kan göra med det. Jag kommer inte gå igenom det
+lika noga som jag gjorde med Audio-elementet.
+
+
+## Spela ljud
+
+Här använder jag AJAX, men du kan även använda Audio som källa till din
+buffer, och då kan du streama ljudet istället för att ladda ner hela ljudet
+innan du kan spela det.
+
+{% highlight javascript %}
+var context = new AudioContext();
+
+var loadSound = function (url, callback) {
+  var request = new XMLHttpRequest();
+  request.open('GET', url, true);
+  request.responseType = 'arraybuffer';
+  request.addEventListener('load', function () {
+    context.decodeAudioData(request.response, callback);
+  });
+  request.send();
+};
+
+var playSound = function (buffer) {
+  var source = context.createBufferSource();
+  source.buffer = buffer;
+  source.connect(context.destination);
+  source.start(0);
+}
+
+var btn = document.createElement('button');
+btn.appendChild(document.createTextNode('Play sound'));
+btn.addEventListener('click', function () {
+  loadSound('', function (buffer) {
+    playSound(buffer);
+  });
+});
+document.body.appendChild(btn);
+{% endhighlight %}
+
+
+## Generera ljud
+
+
+## Manipulera ljud
+
+
+## Analysera ljud
+
 
 # Källor
 
