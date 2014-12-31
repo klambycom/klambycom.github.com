@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Spela ljud i webbläsaren"
-date:   2014-12-31 23:59:59
-comments: false
+date:   2014-12-31 17:19:59
+comments: true
 ---
 
 Jag kommer i detta inlägget skriva om audio-elementet som finns i HTML5. Jag
@@ -376,10 +376,13 @@ Och även [HTML5Rocks](http://www.html5rocks.com/en/tutorials/track/basics/).
 
 # Web Audio API
 
-Om du ska spela flera eller samma ljud samtidigt som du vill spela vid en exakt
-tidpunkt, som i ett spel, fungerar `<audio>` inte lika bra, du kan istället
-använda [Web Audio API](http://webaudio.github.io/web-audio-api/). Web Audio API
-låter dig även använda effekter, generera, manipulera och analysera ljud.
+Jag började läsa om [Web Audio API](http://webaudio.github.io/web-audio-api/)
+först idag, men jag tänkte ändå skriva lite om det eftersom det är ett väldigt
+intressant API som det går att göra väldigt mycket med. Medans `<audio>` bara
+kan användas för att spela ljud. Om du ska spela flera eller samma ljud samtidigt
+som du vill spela vid en exakt tidpunkt, som i ett spel, fungerar `<audio>`
+inte lika bra, du kan istället använda Web Audio API. Web Audio API låter dig
+även använda effekter, generera, manipulera och analysera ljud.
 
 Jag har tyvärr inte använt Web Audio API i min applikation, men jag tänkte
 visa ett par exempel på vad man kan göra med det. Jag kommer inte gå igenom det
@@ -451,9 +454,6 @@ en buffer och dess data hämtas med `getChannelData()` som
 [PCM](http://en.wikipedia.org/wiki/Pulse-code_modulation) i en array.
 
 
-## Manipulera ljud
-
-
 ## Analysera ljud
 
 {% highlight javascript %}
@@ -468,24 +468,10 @@ source.connect(analyser);
 analyser.connect(context.destination);
 {% endhighlight %}
 
+[Demo](/demo/analyser/)
+
 I exemplet ovan skapas en
 [`AnalyserNode`](http://webaudio.github.io/web-audio-api/#the-analysernode-interface) 
-mellan ljudet och högtalarna.
-
-
-
-
-
-## Some useful links:
-* http://updates.html5rocks.com/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
-* https://developer.mozilla.org/en-US/docs/Creating_a_simple_synth
-
-## Kanske Web Audio API:
-* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
-* https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
-* https://developer.mozilla.org/en-US/docs/Web/API/AudioNode
-
-## Libs:
-* http://popcornjs.org/
-* http://mediaelementjs.com/
-* http://www.jplayer.org/
+mellan ljudet och högtalarna. Jag har tyvärr inte hunnit testa `AnalyserNode`
+mer än en väldigt kort stund, men jag lyckades ändå skapa ett ganska snyggt
+demo.
