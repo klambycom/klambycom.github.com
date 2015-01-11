@@ -3,6 +3,7 @@ layout: post
 title:  "Utvärdering"
 date:   2015-01-11 19:20:09
 comments: true
+published: false
 ---
 
 # Utvärdering av kursen
