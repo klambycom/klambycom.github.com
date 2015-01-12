@@ -3,15 +3,14 @@ layout: post
 title:  "Utvärdering"
 date:   2015-01-11 19:20:09
 comments: true
-published: false
 ---
 
 # Utvärdering av kursen
 
 Jag tyckte upplägget på kursen var väldigt bra. Jag gillade att kursen var ganska
-fri. Men det var inte för fritt, och det var skönt att ha några krav, t.ex. React,
-Gulp och Firebase, det gjorde så att jag kunde komma igång med applikationen
-direkt och inte behövde undersöka tekniker först.
+fri. Men det var inte för fritt, och det var skönt att ha några tekniska krav,
+t.ex. React, Gulp och Firebase, eftersom det gjorde så att jag kunde komma igång
+med applikationen direkt och inte behövde undersöka tekniker först.
 
 Det hade varit roligare om det var fler som läste kursen, eftersom jag hade
 velat läsa fler blogginlägg och fler personers kod för insperation. Och även om
@@ -29,7 +28,7 @@ i kodeditorn.
 
 Jag är väldigt nöjd med min applikation. Jag hann med vad jag hade tänkt från
 början, och lite till. Det enda jag är missnöjd med är att jag inte har skrivit
-några test.
+några test, eller väldigt få test.
 
 Kollaboreringen gick bra och jag lyckades göra en pull request på varje
 applikation. Jag tyckte även att kollaboreringen var en bra och lärorik del av
@@ -46,3 +45,9 @@ använda det i mitt examensarbete.
 I första inlägget skrev jag att Javascript var mitt favoritspråk, det har inte
 förändrats. Browserify, Gulp och React har gjort att jag gillar Javascript
 ännu mer.
+
+
+# Fördjupning
+
+Det finns fortfarande bara en annan fördjupning, men jag kommer skriva
+kommentar till den senare nästa vecka.
