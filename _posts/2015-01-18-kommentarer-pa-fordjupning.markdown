@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Kommentar på utvärdering"
+title:  "Kommentarer på fördjupning"
 date:   2015-01-18 00:09:09
-comments: false
+comments: true
 ---
 
 Dessa är mina kommentarer på [Sofia Hjelms djupdykning](http://scriptogr.am/moxs/post/djupdykning).
